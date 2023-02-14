@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "https://github.com/isra-fs/ncentrika/static/css/main.590a3525.css",
+    "main.js": "https://github.com/isra-fs/ncentrika/static/js/main.4a3aad7e.js",
+    "index.html": "https://github.com/isra-fs/ncentrika/index.html",
+    "main.590a3525.css.map": "https://github.com/isra-fs/ncentrika/static/css/main.590a3525.css.map",
+    "main.4a3aad7e.js.map": "https://github.com/isra-fs/ncentrika/static/js/main.4a3aad7e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.590a3525.css",
+    "static/js/main.4a3aad7e.js"
+  ]
+}

@@ -1,0 +1,59 @@
+header{
+    position: fixed;
+    top: 0;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: 999;
+    background-color: #7bd6d0;
+}
+.nav-big{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+}
+.nav-big-link{
+    cursor: pointer;
+    color: #222;
+    text-decoration: none !important;
+    margin-right: 20px;
+}
+.nav-small{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    justify-content: space-around;
+    margin: auto;
+    height: 40%;
+    margin-top: 50px;
+}
+.nav-small-link{
+    cursor: pointer;
+    color: #222;
+    padding-bottom: 5px;
+    margin-left: 10px;
+}
+.header-inner{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    height: 70px;
+}
+.header-inner .navbar-button {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+@media (max-width: 1140px){
+    .header-inner{
+        width: 98%;
+    }
+    .header-inner .appoinment-general-button{
+        padding: 10px 20px;
+    }
+}
