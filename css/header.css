@@ -7,7 +7,10 @@ header{
     align-items: flex-end;
     justify-content: center;
     z-index: 999;
-    background-color: #7bd6d0;
+    background-color: #99BFE5;
+}
+.ncentrika-logo{
+    width: 150px;
 }
 .nav-big{
     list-style: none;
@@ -19,7 +22,9 @@ header{
     cursor: pointer;
     color: #222;
     text-decoration: none !important;
-    margin-right: 20px;
+    margin-right: 14px;
+    font-family: 'OpenSans-Bold';
+    font-size: 15px;
 }
 .nav-small{
     display: flex;
@@ -49,11 +54,15 @@ header{
 }
 
 
-@media (max-width: 1140px){
+@media (max-width: 1180px){
     .header-inner{
         width: 98%;
     }
     .header-inner .appoinment-general-button{
-        padding: 10px 20px;
+        padding: 5px 8px;
+        font-size: 12px;
+    }
+    .nav-big-link{
+        font-size: 14px;
     }
 }

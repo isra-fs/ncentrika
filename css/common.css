@@ -1,7 +1,8 @@
+
 .appoinment-general-button{
     display: inline-block;
     height: auto;
-    padding: 15px 40px;
+    padding: 10px 20px;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
@@ -11,20 +12,36 @@
     -ms-flex-align: center;
     align-items: center;
     border-radius: 30px;
-    background-color: #000;
+    background-color: #F2CF80;
     -webkit-transition: all 400ms ease;
     transition: all 400ms ease;
-    color: #fff;
-    font-size: 16px;
+    color: #000000;
+    font-size: 14px;
     line-height: 26px;
     font-weight: 600;
     text-align: center;
     letter-spacing: 0px;
     text-decoration: none;
+    font-family: 'OpenSans-Bold';
 }
 .phone-general-button{
     font-weight: bold;
     font-size: 15px;
     align-self: center;
     margin-right: 20px;
+}
+@font-face {
+    font-family: "OpenSans-Bold";
+    src: local("OpenSans-Bold"),
+     url("../resources/fonts/OpenSans-Bold.ttf") format("truetype");
+        font-weight: bold;
+}
+@font-face {
+    font-family: "OpenSans-Regular";
+    src: local("OpenSans-Regular"),
+     url("../resources/fonts/OpenSans-Regular.ttf") format("truetype");
+        font-weight: bold;
+}
+section, header{
+    font-family:'OpenSans-Regular';
 }
