@@ -3,7 +3,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: auto;
+    height: 100vh;
 }
 
 .container-home{
@@ -53,6 +53,9 @@
     z-index: -100;
 }
 @media (max-width: 1000px){
+    .section-home{
+        height: auto;
+    }
     .home-slogan, .home-video{
         width: 100%;
     }
