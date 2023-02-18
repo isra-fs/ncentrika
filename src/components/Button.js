@@ -1,8 +1,8 @@
 import React from 'react';
 
-export const AppoinmentButton = ({text}) => {
+export const AppoinmentButton = ({text,extraClass='',onclick}) => {
     return (
-        <button className='appoinment-general-button'>{text}</button>
+        <button className={`appoinment-general-button ${extraClass}`} onClick={onclick}>{text}</button>
     )
 }
 export const PhoneButton = ({number,href}) => {

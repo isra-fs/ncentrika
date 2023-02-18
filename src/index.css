@@ -11,12 +11,7 @@ html, body {
   min-height: 100%; 
 }
 .logo{
-  font-size: 1.3rem;
   cursor: pointer;
-  color: #ece9ea;
-}
-.logo:hover{
-  color: whitesmoke;
 }
 section, footer{
   display: flex;
@@ -24,21 +19,14 @@ section, footer{
   align-items: center;
   font-size: 3rem;
 }
-section{
-  /* height: 100vh; */
-}
+
 nav{
-  /* flex: 0.2; */
   display: flex;
   justify-content: space-between;
 }
 
 
-section#Servicios{
-  background-color: #FFFFFF;
-  color: #000;
-  height: 100vh;
-}
+
 section#About{
   background-color: #000000;
   color: #fff;

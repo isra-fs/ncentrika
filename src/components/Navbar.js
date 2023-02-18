@@ -9,7 +9,7 @@ const Navbar = ({navClass, linkClassName}) =>(
 );
 const navigationInfo = [
     {
-        route:'Servicios',
+        route:'Services',
         title:'Servicios'
     },
     {
@@ -28,7 +28,7 @@ const navigationInfo = [
         route:'Appointment',
         title:'Citas'
     },
-]
+] 
 export const NavComponent = ({onClick, navClass, linkClassName})=>(
   <nav className={navClass}>
       {navigationInfo.map(navigation=>

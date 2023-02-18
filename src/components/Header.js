@@ -14,7 +14,7 @@ const Header = () =>{
                 <Link to="Home" 
                       smooth={true} 
                       className="logo nav-link">
-                      Encentrika
+                      <img src='resources/images/logo.svg' alt='Ncentrika' className='ncentrika-logo'/>
                 </Link>
                 {/*if the width of the window is bigger than 1000px use <Navebar/>,
                    else user <SmallScreensNavbar/>*/}

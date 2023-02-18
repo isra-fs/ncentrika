@@ -3,7 +3,7 @@ import React from 'react';
 import Header from './components/Header';
 import Home from './components/Home';
 import About from './components/About';
-import Servicios from './components/Servicios';
+import Services from './components/Services';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Innovation from './components/Innovation';
@@ -13,7 +13,7 @@ const App = ()=>{
     <div>
         <Header/>
         <Home/>
-        <Servicios/>
+        <Services/>
         <About/>
         <Innovation/>
         <Contact/>
