@@ -26,11 +26,11 @@
 }
 .row.justify-content-md-center .col-md-auto > p {
     font-size: 16px;
-    /* font-family: 'OpenSans-Bold'; */
     max-width: 700px;
     color:#000000;
     line-height: 25px;
     text-align: left;
+    line-height: 30px;
 }
 .row.justify-content-md-center .col-md-auto > h1 {
     font-size: 18px;
@@ -47,11 +47,11 @@
 .show-more-elements {
     background-color: #FFFF;
     color: #000000;
+    min-width:150px;
 }
   
 .hide-services {
     display: none;
-    /* opacity: 0; */
 }
 @media (max-width: 990px){
     .row.justify-content-md-center .col-md-auto > p,
@@ -60,5 +60,9 @@
     }
     .col-md-auto >img{
         width: 150px;
+    }
+    .conteiner-services h1{
+        font-size: 30px;
+        margin-top: 20px;
     }
 }

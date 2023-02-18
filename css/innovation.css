@@ -1,0 +1,113 @@
+.section-innovation{
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-color: #FFF;
+    text-align: center;
+}
+
+.section-innovation h1 {
+    font-family: 'OpenSans-Bold';
+    font-size: 48px;
+    text-transform: none;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.laser-list{
+    margin: 0px;
+    width: 100%;
+    font-size: 16px;
+    color: #000000;
+    line-height: 34px;
+    text-align: left;
+    list-style-type: none;
+}
+.innovation-image{
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 20%;
+}
+.innovation-description{
+    width: 80%;
+}
+.section-innovation #innovationPreview {
+    font-size: 18px;
+    color: #000000;
+    line-height: 34px;
+    text-align: left;
+    width: 50%;
+    margin: 50px auto 40px auto;
+    list-style-type: none;
+
+}
+
+.section-innovation .show-more-elements{
+    background-color: #FABE15;
+    color:#000000;
+    min-width: 150px;
+}
+.section-innovation  ul li {
+    max-width: 700px;
+}
+ul li::before {
+    color: transparent;
+    font-size: 0px;
+    content: "";
+    margin-right: 10px;
+    padding: 10px;
+    background-color: orange;
+    mask-image: url("../resources/images/star-icon.png");
+    -webkit-mask-image: url("../resources/images/star-icon.png");
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    vertical-align: top;
+}
+.section-innovation .col-md-auto{
+    margin-bottom: 40px;
+}
+.section-innovation .col-md-auto img {
+    width: 300px;
+    border-radius: 30px;
+}
+
+.hide-innovation-list {
+    display: none;
+}
+
+@media (max-width: 1200px){
+    .section-innovation .col-md-auto img {
+        width: 200px;
+    }
+    .section-innovation .col-md-auto h1 {
+        margin-top: 0px;
+    }
+    
+}
+@media (max-width: 990px){
+    .container{
+        min-width: 100% !important;
+    }
+    .section-innovation{
+        padding-top: 50px;
+    }
+    .section-innovation h1 {
+        font-size: 30px;
+    }
+    .section-innovation ul.laser-list,
+    .section-innovation ul#innovationPreview
+     {
+        width: 100%;
+        margin: 20px auto;
+        font-size: 16px;
+        text-align: left;
+        margin-left: 10px;
+    }
+    .section-innovation .col-md-auto img {
+        width: 100%;
+    }
+    .section-innovation .col-md-auto{
+        margin-bottom: 0px;
+    }
+    .section-innovation .col-md-auto h1 {
+        margin-top: 20px;
+    }
+}
