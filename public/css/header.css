@@ -20,7 +20,7 @@ header{
 }
 .nav-big-link{
     cursor: pointer;
-    color: #222;
+    color: #000;
     text-decoration: none !important;
     margin-right: 14px;
     font-family: 'OpenSans-Bold';
@@ -34,12 +34,14 @@ header{
     margin: auto;
     height: 40%;
     margin-top: 50px;
+    font-size: 16px;
 }
 .nav-small-link{
     cursor: pointer;
-    color: #222;
+    color: #FFF;
     padding-bottom: 5px;
     margin-left: 10px;
+    text-decoration: none !important;
 }
 .header-inner{
     width: 90%;

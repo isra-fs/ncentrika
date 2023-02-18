@@ -14,8 +14,8 @@ const App = ()=>{
         <Header/>
         <Home/>
         <Services/>
-        <About/>
         <Innovation/>
+        <About/>
         <Contact/>
         <Appointment/>
         <Footer/>

@@ -13,12 +13,12 @@ const navigationInfo = [
         title:'Servicios'
     },
     {
-        route:'About',
-        title:'¿Quiénes somos?'
-    },
-    {
         route:'Innovation',
         title:'Innovación en tecnología'
+    },
+    {
+        route:'About',
+        title:'¿Quiénes somos?'
     },
     {
         route:'Contact',
