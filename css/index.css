@@ -1,0 +1,86 @@
+*{padding: 0px;
+  margin:  0px;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;}
+html, body {
+  width: 100%;
+  min-height: 100%; 
+}
+.logo{
+  cursor: pointer;
+}
+section, footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+section#About{
+  background-color: #000000;
+  color: #fff;
+  height: 100vh;
+}
+section#Innovation{
+  background-color: #FFFFFF;
+  color: #000000;
+  height: 100vh;
+}
+section#Contact{
+  background-color: #000000;
+  color:#FFFFFF;
+  height: 100vh;
+}
+section#Appointment{
+  background-color: #FFFFFF;
+  color:#000;
+  height: 100vh;
+}
+footer{
+  height: 200px;
+  background: #000;
+  color: white;
+}
+
+
+.hamburger-btn{
+  font-size: 1.3rem;
+  position: absolute;
+  bottom: 15px;
+  width: 40px;
+  height: 35px;
+  right: 30px;
+  outline: none;
+  background-color: #FFFFFF;
+  color: #000000;
+}
+.addTransiton{
+  transform: translateX(170px);
+  transition: transform 0.5s ease-in-out;
+}
+.removeTransition{
+  transform: translateX(20px);
+  transition: transform 0.5s ease-in-out;
+}
+
+#sidebar-list{
+  background-color: #97C2EF;
+  height: 90vh;
+  width: 170px;
+  position: absolute;
+  z-index: 2000;
+  right: 0;
+  top: 0;
+  margin-top: 70px;
+}
