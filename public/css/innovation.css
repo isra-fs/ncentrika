@@ -1,7 +1,7 @@
 .section-innovation{
     padding-top: 70px;
     padding-bottom: 70px;
-    background-color: #FFF;
+    background-color: #FFF8F0;
     text-align: center;
 }
 
@@ -55,8 +55,8 @@ ul li::before {
     margin-right: 10px;
     padding: 10px;
     background-color: orange;
-    mask-image: url("../resources/images/star-icon.png");
-    -webkit-mask-image: url("../resources/images/star-icon.png");
+    mask-image: url("../resources/images/star-icon.svg");
+    -webkit-mask-image: url("../resources/images/star-icon.svg");
     -webkit-mask-size: cover;
     mask-size: cover;
     vertical-align: top;

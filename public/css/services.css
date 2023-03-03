@@ -1,9 +1,14 @@
 .section-services{
-    padding-top: 70px;
-    padding-bottom: 70px;
-    background-color: #FABE15;
+    /* padding-top: 70px;
+    padding-bottom: 70px; */
+   
 }
+.section-services .container{
+    background-color: #92D2C7;
+    padding-top: 20px;
+    padding-bottom: 40px;
 
+}
 .conteiner-services{
    width: 100%;
    text-align: center;
@@ -18,7 +23,8 @@
     font-family: 'OpenSans-Bold';
     font-size: 48px;
     text-transform: none;
-    margin-top: 40px;
+    /* margin-top: 40px; */
+    margin-bottom: 40px;
 
 }
 .conteiner-services .services-list{
