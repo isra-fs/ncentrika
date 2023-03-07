@@ -53,13 +53,14 @@ footer{
 .hamburger-btn{
   font-size: 1.3rem;
   position: absolute;
-  bottom: 15px;
-  width: 40px;
-  height: 35px;
-  right: 30px;
+  bottom: 12px;
+  width: 45px;
+  height: 45px;
+  right: 15px;
   outline: none;
-  background-color: #FABE15;
-  color: #000 !important;
+  background-color: white;
+  color: #000;
+  border-radius: 100%;
 }
 .addTransiton{
   transform: translateX(250px);

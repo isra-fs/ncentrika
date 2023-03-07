@@ -1,6 +1,7 @@
 import React from 'react';
-import { AppoinmentButton } from './Button';
+import { GeneralButton } from './Button';
 import InnovationList from './InnovationList';
+import Facilities from './Facilities';
 const Innovation = () => {
 
     const handleClick = (e) => {
@@ -29,13 +30,14 @@ const Innovation = () => {
                     <li>Articulador AD2</li>
                 </ul>
                 <InnovationList></InnovationList>
-                <AppoinmentButton
+                <GeneralButton
                         text='Ver más'
                         extraClass='show-more-elements'
                          onclick={handleClick}
                         />
+                   <Facilities/>
             </div>
-
+     
         </section>
     )
 }

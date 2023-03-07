@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppoinmentButton } from './Button';
+import { GeneralButton } from './Button';
 const Services = () => {
     const handleClick = (e) => {
         e.preventDefault();
@@ -98,7 +98,7 @@ const Services = () => {
                     </div>
 
                 </div>
-                    <AppoinmentButton
+                    <GeneralButton
                         text='Más Servicios'
                         extraClass='show-more-elements'
                         onclick={handleClick}

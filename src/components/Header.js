@@ -23,7 +23,7 @@ const Header = () =>{
                 linkClassName="nav-big-link"/>
                 <div className='navbar-button'> 
                     <PhoneButton  href="tel:+6646706182" number={'(664)6706182'}/>
-                    <AppoinmentButton text={'Agenda hoy'}/>
+                    <AppoinmentButton text={'Agenda hoy'} extraClass={'header-button'}/>
                 </div>
                 
                 </>
