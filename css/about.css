@@ -1,0 +1,54 @@
+.section-about{
+    width: 100%;
+    background-color: #EAA9CB;
+    color: black;
+    background-image: url(../resources/images/backgroundAbout.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+.section-about h1 {
+    font-family: 'OpenSans-Bold';
+    font-size: 48px;
+    text-transform: none;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.section-about .about-image{
+    width: 50%;
+    float: left;
+}
+.section-about .about-image img{
+    width: 100%;
+}
+.section-about .about-description{
+    width: 50%;
+    float: left;
+
+}
+.section-about h2{
+    text-transform: capitalize;
+    font-size: 20px;
+    font-family: 'OpenSans-Bold';
+}
+
+.section-about p{
+    font-size: 16px;
+    text-align: right;
+    font-family: 'OpenSans-Regular';
+    line-height: 30px;
+}
+@media (max-width: 1000px){
+    .section-about .about-image,
+    .section-about .about-description
+    {
+        width: 100%;
+    }
+    .section-about .about-description{
+        margin-top: 20px;
+    }
+    .section-about p{
+       
+        text-align: center;
+    }
+}

@@ -52,6 +52,9 @@
     object-fit: cover;
     z-index: -100;
 }
+.responsive{
+    display: none;
+}
 @media (max-width: 1000px){
     .section-home{
         height: auto;
@@ -64,10 +67,15 @@
     }
     .home-slogan  h1{
         font-size: 40px;
+        margin-top: 5px;
     }
-    .home-video{
-        margin-top: 40px;
+    .home-video.responsive{
+        display: block;
+        margin-top: 100px;
         border-radius: 0px;
         height: auto;
+    }
+    .home-video.destock{
+        display: none;
     }
 }
