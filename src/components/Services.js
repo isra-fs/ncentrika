@@ -19,7 +19,7 @@ const Services = () => {
                     <h1>Servicios</h1>
                     <div className="row justify-content-md-center">
                         <div className="col-md-auto">
-                            <img src='resources/images/odontologia_bebe.svg' alt='Odontologia bebe'></img>
+                            <div className='image-container'><img src='resources/images/odontologia_bebe.svg' alt='Odontologia bebe'></img></div>
                         </div>
                         <div className="col-md-auto">
                             <h1>Odontologia para el bebe</h1>
@@ -29,7 +29,7 @@ const Services = () => {
                         
                         </div>
                         <div className="col-md-auto">
-                            <img src='resources/images/odontologia_restaurativa.svg' alt='Odontologia Restaurativa'></img>
+                        <div className='image-container'> <img src='resources/images/odontologia_restaurativa.svg' alt='Odontologia Restaurativa'></img></div>
                         </div>
                         <div className="col-md-auto">
                             <h1>Odontologia restaurativa</h1>
@@ -37,7 +37,7 @@ const Services = () => {
                         
                         </div>
                         <div className="col-md-auto">
-                            <img src='resources/images/R_D_anestesia.svg' alt='Rehabilatacion dental bajo anestesia general'></img>
+                        <div className='image-container'> <img src='resources/images/R_D_anestesia.svg' alt='Rehabilatacion dental bajo anestesia general'></img></div>
                         </div>
                         <div className="col-md-auto">
                             <h1>Rehabilatacion dental bajo anestesia general</h1>
@@ -51,7 +51,7 @@ const Services = () => {
                     <div className="row justify-content-md-center">
    
                         <div className="col-md-auto ">
-                            <img src='resources/images/M_I_preventiva.svg' alt='Odontologia minimamente invasiva y preventiva'></img>
+                        <div className='image-container'> <img src='resources/images/M_I_preventiva.svg' alt='Odontologia minimamente invasiva y preventiva'></img></div>
                         </div>
                         <div className="col-md-auto">
                             <h1>Odontologia minimamente invasiva y preventiva</h1>
@@ -62,7 +62,7 @@ const Services = () => {
                             </p>
                         </div>
                         <div className="col-md-auto">
-                            <img src='resources/images/ortodoncia_invisible.svg' alt='Ortodoncia invisible'></img>
+                        <div className='image-container'>  <img src='resources/images/ortodoncia_invisible.svg' alt='Ortodoncia invisible'></img></div>
                         </div>
                         <div className="col-md-auto">
                             <h1>Ortodoncia invisible</h1>
@@ -75,7 +75,7 @@ const Services = () => {
                             </p>
                         </div>
                         <div className="col-md-auto">
-                            <img src='resources/images/ortodoncia_convencional.svg' alt='Ortodoncia convencional'></img>
+                        <div className='image-container'><img src='resources/images/ortodoncia_convencional.svg' alt='Ortodoncia convencional'></img></div>
                         </div>
                         <div className="col-md-auto">
                             <h1>Ortodoncia convencional</h1>
@@ -85,7 +85,7 @@ const Services = () => {
                             </p>
                         </div>
                         <div className="col-md-auto">
-                            <img src='resources/images/ortopedia_maxilar.svg' alt='Ortopedia maxilar'></img>
+                        <div className='image-container'><img src='resources/images/ortopedia_maxilar.svg' alt='Ortopedia maxilar'></img></div>
                         </div>
                         <div className="col-md-auto">
                             <h1>Ortopedia maxilar</h1>

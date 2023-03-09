@@ -25,7 +25,11 @@
     font-family: 'OpenSans-Bold';
 }
 .header-button{
-    background-color: #FFFFFF;
+    background-color: #FFF8F0;
+    color: #3B3937;
+}
+.home-appoinment{
+    color: #3B3937;
 }
 .phone-general-button{
     font-weight: bold;

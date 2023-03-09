@@ -1,7 +1,7 @@
 .section-services{
     /* padding-top: 70px;
     padding-bottom: 70px; */
-   
+    background-color: #FFF8F0;
 }
 .section-services .container{
     background-color: #92D2C7;
@@ -23,8 +23,8 @@
     font-family: 'OpenSans-Bold';
     font-size: 48px;
     text-transform: none;
-    /* margin-top: 40px; */
     margin-bottom: 40px;
+    color: #3B3937;
 
 }
 .conteiner-services .services-list{
@@ -33,21 +33,23 @@
 .row.justify-content-md-center .col-md-auto > p {
     font-size: 16px;
     max-width: 700px;
-    color:#000000;
-    line-height: 25px;
+    color:#3B3937;
     text-align: left;
     line-height: 30px;
 }
 .row.justify-content-md-center .col-md-auto > h1 {
     font-size: 18px;
     font-family: 'OpenSans-Bold';
-    color:#000000;
+    color:#3B3937;
     text-align: left;
     margin-bottom: 20px;
-    text-transform:capitalize;
 }
-.col-md-auto >img{
+.col-md-auto > div.image-container {
+    text-align: right;
     width: 200px;
+}
+.col-md-auto > div.image-container  >img{
+    width: 100px;
 }
 
 .show-more-elements {
@@ -64,8 +66,11 @@
     .row.justify-content-md-center .col-md-auto > h1{
         text-align: left;
     }
-    .col-md-auto >img{
+    .col-md-auto > div.image-container{
         width: 150px;
+    }
+    .col-md-auto > div.image-container >img{
+        width: 100%;
     }
     .conteiner-services h1{
         font-size: 30px;
