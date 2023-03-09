@@ -25,13 +25,21 @@
     font-family: 'OpenSans-Bold';
 }
 .header-button{
-    background-color: #FFFFFF;
+    background-color: #FFF8F0;
+    color: #3B3937;
+}
+.home-appoinment{
+    color: #3B3937;
 }
 .phone-general-button{
     font-weight: bold;
     font-size: 15px;
     align-self: center;
     margin-right: 20px;
+}
+.form-generalButton{
+    background-color:#FFF;
+    width: 150px;
 }
 .fixed-mobile{
     position: absolute;

@@ -1,13 +1,15 @@
 .section-about{
     width: 100%;
     background-color: #EAA9CB;
-    color: black;
+    color: #3B3937;
     background-image: url(../resources/images/backgroundAbout.svg);
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
+    padding-bottom: 30px;
 }
 .section-about h1 {
+    color: #3B3937;
     font-family: 'OpenSans-Bold';
     font-size: 48px;
     text-transform: none;
@@ -27,16 +29,19 @@
 
 }
 .section-about h2{
+    color: #3B3937;
     text-transform: capitalize;
-    font-size: 20px;
+    font-size: 30px;
     font-family: 'OpenSans-Bold';
+    text-align: right;
 }
 
 .section-about p{
+    color: #3B3937;
     font-size: 16px;
     text-align: right;
-    font-family: 'OpenSans-Regular';
-    line-height: 30px;
+    font-family: 'OpenSans-Bold';
+    line-height: 28px;
 }
 @media (max-width: 1000px){
     .section-about .about-image,
@@ -47,7 +52,8 @@
     .section-about .about-description{
         margin-top: 20px;
     }
-    .section-about p{
+    .section-about p,
+    .section-about h2{
        
         text-align: center;
     }

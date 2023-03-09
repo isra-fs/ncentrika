@@ -1,0 +1,53 @@
+.section-contact {
+    background-color: #FFF8F0;
+    text-align: center;
+
+}
+.section-contact h1{
+    font-family: 'OpenSans-Bold';
+    font-size: 48px;
+    text-transform: none;
+    margin-bottom: 40px;
+    color: #3B3937;
+    margin-top: 30px;
+}
+.section-contact .col-md-auto.contact-form{
+    background-color: #FABE15;
+    padding: 100px;
+    /* background-image: url(../resources/images/backgroundAbout.svg); */
+    /* background-size: cover;
+    background-repeat: no-repeat; */
+    height: 600px;
+  
+}
+.section-contact form{
+    /* min-height: 400px; */
+}
+.section-contact form >div{
+ /* text-align: left; */
+ height:60px;
+ margin-bottom: 20px;
+}
+
+.section-contact form >div >label{
+    font-family: 'OpenSans-Bold';
+    font-size: 14px;
+    color: #3B3937;
+    float: left;
+    margin-right: 10px;
+}
+.section-contact form > div > input{
+    background: transparent;
+    border-bottom: 1px solid #3B3937;
+    width: 85%;
+    /* margin-bottom: 37px; */
+    height: 30px;
+    float: right;
+}
+.section-contact form > div >textarea{
+    background: transparent;
+    border: 1px solid #3B3937;
+    border-radius: 15px;
+    width: 85%;
+    float: right;
+}
