@@ -31,11 +31,20 @@
 .home-appoinment{
     color: #3B3937;
 }
+.contact-appoinment{
+    color: #3B3937;
+    padding: 10px 40px;
+
+}
 .phone-general-button{
     font-weight: bold;
     font-size: 15px;
     align-self: center;
     margin-right: 20px;
+}
+.form-generalButton{
+    background-color:#FFF;
+    width: 150px;
 }
 .fixed-mobile{
     position: absolute;

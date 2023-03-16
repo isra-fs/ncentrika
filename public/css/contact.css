@@ -1,0 +1,109 @@
+.section-contact {
+    background-color: #FFF8F0;
+    text-align: center;
+    padding-bottom: 40px;
+
+}
+.section-contact h1{
+    font-family: 'OpenSans-Bold';
+    font-size: 48px;
+    text-transform: none;
+    margin-bottom: 40px;
+    color: #3B3937;
+    margin-top: 30px;
+}
+.section-contact .information-contact p{
+    color: #3B3937;
+    font-size: 16px;
+    /* text-align: justify; */
+    font-family: 'OpenSans-Regular';
+    line-height: 26px;
+    margin-bottom: 40px;
+}
+.information-contact p >strong{
+    color: #3B3937;
+    font-size: 16px;
+    /* text-align: justify; */
+    font-family: 'OpenSans-Bold';
+    line-height: 26px;
+}
+.section-contact .col-md-auto.contact-form{
+    background-color: #FABE15;
+    padding: 37px;
+    border-radius: 20px;
+  
+}
+.information-contact{
+    width: 300px;
+    padding-top: 40px;
+}
+.col-md-auto.contact-form input,
+.col-md-auto.contact-form textarea {
+    font-size: 14px;
+    
+    color: #3B3937;
+}
+.contact-social-network{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+.contact-social-network img{
+    width:30px;
+}
+
+.section-contact form >div{
+ height:60px;
+ margin-bottom: 20px;
+}
+
+.section-contact form >div >label{
+    font-family: 'OpenSans-Bold';
+    font-size: 14px;
+    color: #3B3937;
+    float: left;
+    margin-right: 10px;
+}
+.section-contact form > div > input{
+    background: transparent;
+    border-bottom: 1px solid #3B3937;
+    width: 85%;
+    height: 30px;
+    float: right;
+}
+.col-md-auto.contact-form{
+    width: 60%;
+}
+.section-contact form > div >textarea{
+    background: transparent;
+    border: 1px solid #3B3937;
+    border-radius: 15px;
+    width: 85%;
+    height: 140px;
+    color: #3B3937;
+    padding: 10px;
+    float: right;
+
+}
+@media (max-width: 1200px){
+    .information-contact{
+        width: 215px;
+        padding-top: 30px;
+    }
+    .section-contact .col-md-auto.contact-form{
+        padding: 30px;
+    }
+}
+@media (max-width: 1000px){
+    .information-contact{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .section-contact .col-md-auto.contact-form{
+        padding: 20px;
+        width: 95%;
+        margin: 0 auto;
+    }
+    .contact-social-network img{
+        width:40px;
+    }
+}
