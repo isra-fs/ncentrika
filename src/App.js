@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 import Innovation from './components/Innovation';
 import Appointment from './components/Appointment';
 import TopHeader from './components/TopHeader';
+import TableContactInfo from './components/TableContactInfo';
 const App = ()=>{
   return(
     <div>
@@ -19,6 +20,7 @@ const App = ()=>{
         <Innovation/>
         <About/>
         <Contact/>
+        <TableContactInfo/>
         <Appointment/>
         <Footer/>
         

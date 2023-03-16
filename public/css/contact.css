@@ -4,6 +4,13 @@
     padding-bottom: 40px;
 
 }
+.section-table-info{
+    background-color: #FFFFFF;
+    display:block;
+}
+.contact-map-information{
+    margin-top: 30px;
+}
 .section-contact h1{
     font-family: 'OpenSans-Bold';
     font-size: 48px;
@@ -46,6 +53,7 @@
 .contact-social-network{
     display: grid;
     grid-template-columns: auto auto auto auto;
+    margin-top: 20px;
 }
 .contact-social-network img{
     width:30px;
@@ -84,6 +92,36 @@
     float: right;
 
 }
+.contact-table-information{
+    margin-top: 60px;
+}
+
+.table td, .table th,
+.table thead th{
+    border-top:0px !important;
+    border-bottom:0px !important;
+    text-transform: capitalize;
+    font-family: 'OpenSans-Regular';
+    font-size: 16px;
+    
+    
+}
+.table td strong, .table th strong{
+    font-family: 'OpenSans-Bold';
+}
+.table thead th{
+    font-family: 'OpenSans-Bold';
+    color:#3B3937;
+    font-size: 25px;
+} 
+.contact-appoinment-two.mobile{
+    display: none;
+}
+.contact-appoinment-two.desk{
+    display: block;
+    width: 36%;
+    margin: 0 auto;
+}
 @media (max-width: 1200px){
     .information-contact{
         width: 215px;
@@ -106,4 +144,22 @@
     .contact-social-network img{
         width:40px;
     }
+    .contact-appoinment-two.mobile{
+        display: block;
+        width: 40%;
+        margin: 0 auto;
+    }
+    .contact-appoinment-two.desk{
+        display: none;
+    }
 }
+@media (max-width: 600px){
+
+    .contact-appoinment-two.mobile{
+        display: block;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+}
+
