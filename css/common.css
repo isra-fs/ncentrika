@@ -31,6 +31,14 @@
 .home-appoinment{
     color: #3B3937;
 }
+.contact-appoinment{
+    color: #3B3937;
+    padding: 10px 40px;
+
+}
+.contact-appoinment-two{
+    color: #000000;
+}
 .phone-general-button{
     font-weight: bold;
     font-size: 15px;

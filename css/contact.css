@@ -1,7 +1,15 @@
 .section-contact {
     background-color: #FFF8F0;
     text-align: center;
+    padding-bottom: 40px;
 
+}
+.section-table-info{
+    background-color: #FFFFFF;
+    display:block;
+}
+.contact-map-information{
+    margin-top: 30px;
 }
 .section-contact h1{
     font-family: 'OpenSans-Bold';
@@ -11,20 +19,47 @@
     color: #3B3937;
     margin-top: 30px;
 }
+.section-contact .information-contact p{
+    color: #3B3937;
+    font-size: 16px;
+    /* text-align: justify; */
+    font-family: 'OpenSans-Regular';
+    line-height: 26px;
+    margin-bottom: 40px;
+}
+.information-contact p >strong{
+    color: #3B3937;
+    font-size: 16px;
+    /* text-align: justify; */
+    font-family: 'OpenSans-Bold';
+    line-height: 26px;
+}
 .section-contact .col-md-auto.contact-form{
     background-color: #FABE15;
-    padding: 100px;
-    /* background-image: url(../resources/images/backgroundAbout.svg); */
-    /* background-size: cover;
-    background-repeat: no-repeat; */
-    height: 600px;
+    padding: 37px;
+    border-radius: 20px;
   
 }
-.section-contact form{
-    /* min-height: 400px; */
+.information-contact{
+    width: 300px;
+    padding-top: 40px;
 }
+.col-md-auto.contact-form input,
+.col-md-auto.contact-form textarea {
+    font-size: 14px;
+    
+    color: #3B3937;
+}
+.contact-social-network{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin-top: 20px;
+}
+.contact-social-network img{
+    width:30px;
+}
+
 .section-contact form >div{
- /* text-align: left; */
  height:60px;
  margin-bottom: 20px;
 }
@@ -40,14 +75,91 @@
     background: transparent;
     border-bottom: 1px solid #3B3937;
     width: 85%;
-    /* margin-bottom: 37px; */
     height: 30px;
     float: right;
+}
+.col-md-auto.contact-form{
+    width: 60%;
 }
 .section-contact form > div >textarea{
     background: transparent;
     border: 1px solid #3B3937;
     border-radius: 15px;
     width: 85%;
+    height: 140px;
+    color: #3B3937;
+    padding: 10px;
     float: right;
+
 }
+.contact-table-information{
+    margin-top: 60px;
+}
+
+.table td, .table th,
+.table thead th{
+    border-top:0px !important;
+    border-bottom:0px !important;
+    text-transform: capitalize;
+    font-family: 'OpenSans-Regular';
+    font-size: 16px;
+    
+    
+}
+.table td strong, .table th strong{
+    font-family: 'OpenSans-Bold';
+}
+.table thead th{
+    font-family: 'OpenSans-Bold';
+    color:#3B3937;
+    font-size: 25px;
+} 
+.contact-appoinment-two.mobile{
+    display: none;
+}
+.contact-appoinment-two.desk{
+    display: block;
+    width: 36%;
+    margin: 0 auto;
+}
+@media (max-width: 1200px){
+    .information-contact{
+        width: 215px;
+        padding-top: 30px;
+    }
+    .section-contact .col-md-auto.contact-form{
+        padding: 30px;
+    }
+}
+@media (max-width: 1000px){
+    .information-contact{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .section-contact .col-md-auto.contact-form{
+        padding: 20px;
+        width: 95%;
+        margin: 0 auto;
+    }
+    .contact-social-network img{
+        width:40px;
+    }
+    .contact-appoinment-two.mobile{
+        display: block;
+        width: 40%;
+        margin: 0 auto;
+    }
+    .contact-appoinment-two.desk{
+        display: none;
+    }
+}
+@media (max-width: 600px){
+
+    .contact-appoinment-two.mobile{
+        display: block;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+}
+
