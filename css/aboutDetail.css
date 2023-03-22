@@ -1,43 +1,93 @@
-html,body{
-    width: 100%;
-    height: 100%;
+
+  .section-about-detail{
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
-  
-  /* .container{
-    padding: 75px 0;
-    margin: 0 auto;
-    width: 1140px;
-  } */
-  
-  /* h1{
-    position: relative;
-    margin-bottom: 45px;
-    font-family: 'Oswald', sans-serif;
-    font-size: 44px;
-    text-transform: uppercase;
-    color: #424242;
-  } */
-  
   .gallery-wrap {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 300px;
+    height: 400px;
+ 
   }
+  .gallery-wrap > div > p strong{
+    font-family: "OpenSans-bold";
+  }
+  .gallery-wrap > div > p {
+    font-size: 15px;
+    font-family: "OpenSans-Regular";
+    float: left;
+    width: 40%;
+    margin-top: 100px;
+    display: none;
+  }
+  .gallery-wrap > div > img {
+        height: 400px;
+        float: right;
+        display: none;
+  }
+
   .item >h1{
     font-size: 18px;
-    transform: rotate(-90deg);
+    transform: rotate(90deg);
     margin-top: 150px;
+    font-family: 'OpenSans-Bold';
+    color: white;
+    display: block;
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 1s;
+    animation-name: fadeIn;
+    animation-duration: 1s;
   }
   .item {
+    padding-left: 20px;
     flex: .1;
     height: 100%;
-    transition: flex  0.8s ease;
+    transition: flex  0.2s ease;
     
   }
-  .item:hover{flex: 1;}
+  .item:hover{flex: 1; background-color: white;}
+  .item:hover ~ #defaultOn {flex: .1;  background-color: #FABE15;}
+  .item:hover ~ #defaultOn h1{ display: block;}
+  .item:hover ~ #defaultOn p,.item:hover ~ #defaultOn img{ 
+    display: none;
+  } 
   .item:hover h1{ display: none;}
+  .item:hover p{
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 2s;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    display: block;
+  }
   
+  .item:hover img{ 
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 2s;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    display: block;
+  }
+  #defaultOn{flex: 1;background-color: white;}
+  #defaultOn h1{ display: none;}
+  #defaultOn p, #defaultOn img{ 
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 2s;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    display: block;
+  } 
+
+
+  @-webkit-keyframes fadeIn { 
+
+    100% { opacity: 1; }
+  }
+  
+  @keyframes fadeIn {
+    100% { opacity: 1; }
+  }
+
   .item-1 { 
     background-color: #99BFE5;
   }
@@ -53,4 +103,31 @@ html,body{
   .item-4 { 
     background-color: #FABE15;
   }
-  
+  @media (max-width: 900px){
+
+    .gallery-wrap {
+      flex-direction: column;
+      height: auto;
+    }
+    .item >h1{
+      margin: 30px auto;
+      transform: rotate(0deg);
+      text-align: center;
+
+    }
+    .item{
+      padding: 0px;
+    }
+    .gallery-wrap > div > img {
+      width: 100%;
+      margin: 0 auto;
+      height: auto;
+    }
+    .gallery-wrap > div > p{
+      margin: 20px auto;
+      width: 100%;
+      text-align: center;
+    }
+
+
+}
