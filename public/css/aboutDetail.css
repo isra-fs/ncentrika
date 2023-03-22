@@ -103,4 +103,31 @@
   .item-4 { 
     background-color: #FABE15;
   }
-  
+  @media (max-width: 900px){
+
+    .gallery-wrap {
+      flex-direction: column;
+      height: auto;
+    }
+    .item >h1{
+      margin: 30px auto;
+      transform: rotate(0deg);
+      text-align: center;
+
+    }
+    .item{
+      padding: 0px;
+    }
+    .gallery-wrap > div > img {
+      width: 100%;
+      margin: 0 auto;
+      height: auto;
+    }
+    .gallery-wrap > div > p{
+      margin: 20px auto;
+      width: 100%;
+      text-align: center;
+    }
+
+
+}
