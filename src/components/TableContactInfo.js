@@ -12,6 +12,7 @@ const TableContactInfo = () => {
                                 <th>Urgencias dentales</th>
                             </tr>
                         </thead>
+                        <tbody>
                         <tr>
                             <th>Lunes a Viernes<br /> 9:00am – 6:00pm</th>
                             <th>Favor de enviar mensaje directo a nuestra liga de <strong>Instagram</strong> o <strong>Whatsaap</strong></th>
@@ -24,6 +25,7 @@ const TableContactInfo = () => {
                             <th></th>
                             <th> <AppoinmentButton text={'Quiero agendar una cita'} extraClass="contact-appoinment-two desk" /></th>
                         </tr>
+                        </tbody>
                     </table>
                     <AppoinmentButton text={'Quiero agendar una cita'} extraClass="contact-appoinment-two mobile" />
                 </div>
