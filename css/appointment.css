@@ -1,0 +1,82 @@
+.section-appointment{
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-color: #FFF8F0;
+    text-align: center;
+}
+
+.section-appointment h1 {
+    font-family: 'OpenSans-Bold';
+    font-size: 48px;
+    text-transform: none;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.section-appointment ul {
+    font-size: 18px;
+    color: #000000;
+    line-height: 34px;
+    text-align: left;
+    width: 50%;
+    margin: 50px auto 40px auto;
+    list-style-type: none;
+
+}
+.section-appointment  ul li {
+    max-width: 700px;
+}
+.section-appointment ul li::before {
+    color: transparent;
+    font-size: 0px;
+    content: "";
+    margin-right: 10px;
+    padding: 10px;
+    background-color: orange;
+    mask-image: url("../resources/images/star-icon.svg");
+    -webkit-mask-image: url("../resources/images/star-icon.svg");
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    vertical-align: top;
+}
+.section-appointment .appointment-description{
+    padding: 40px;
+}
+.section-appointment h2{
+    color: #3B3937;
+    text-transform: capitalize;
+    font-size: 30px;
+    font-family: 'OpenSans-Bold';
+    text-align: center;
+    margin-bottom: 40px;
+}
+.section-appointment p{
+    color: #3B3937;
+    font-size: 18px;
+    text-align: center;
+    font-family: 'OpenSans-Regular';
+    line-height: 40px;
+}
+
+@media (max-width: 990px){
+    .section-appointment .appointment-description{
+        padding: 0px;
+    }
+    .container{
+        min-width: 100% !important;
+    }
+    .section-appointment{
+        padding-top: 50px;
+    }
+    .section-appointment h1 {
+        font-size: 30px;
+    }
+    .section-appointment ul
+     {
+        width: 100%;
+        margin: 20px auto;
+        font-size: 16px;
+        text-align: left;
+        margin-left: 10px;
+    }
+}
