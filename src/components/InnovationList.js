@@ -18,7 +18,7 @@ const InnovationList = () => {
                     <li>Acelera tratamientos de ortodoncia</li>
                     <li>Curación de lesiones aftosas</li>
                     <li>Curación de dolor en la articulación temporomandibular</li>
-                    <li>RWehabilita procesos inflamatorios de extracciones o tratamientos en general</li>
+                    <li>Rehabilitación procesos inflamatorios de extracciones o tratamientos en general</li>
                 </ul>
             </div>
             <div className="col-md-auto">
