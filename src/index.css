@@ -17,7 +17,7 @@ h1,h2,h3,h4,h5,p{
 .logo{
   cursor: pointer;
 }
-section, footer{
+section{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,11 +32,6 @@ section#Appointment{
   background-color: #FFFFFF;
   color:#000;
   height: 100vh;
-}
-footer{
-  height: 200px;
-  background: #000;
-  color: white;
 }
 
 

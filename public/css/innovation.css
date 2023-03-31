@@ -48,7 +48,7 @@
 .section-innovation  ul li {
     max-width: 700px;
 }
-ul li::before {
+.section-innovation ul li::before {
     color: transparent;
     font-size: 0px;
     content: "";
