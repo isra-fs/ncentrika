@@ -28,11 +28,6 @@ nav{
   display: flex;
   justify-content: space-between;
 }
-section#Appointment{
-  background-color: #FFFFFF;
-  color:#000;
-  height: 100vh;
-}
 
 
 .hamburger-btn{

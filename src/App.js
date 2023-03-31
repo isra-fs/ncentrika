@@ -11,6 +11,7 @@ import Appointment from './components/Appointment';
 import TopHeader from './components/TopHeader';
 import TableContactInfo from './components/TableContactInfo';
 import AboutDetails from './components/AboutDetails';
+import Testimonials from './components/Testimonials';
 const App = ()=>{
   return(
     <div>
@@ -23,6 +24,7 @@ const App = ()=>{
         <AboutDetails/>
         <Contact/>
         <TableContactInfo/>
+        <Testimonials/>
         <Appointment/>
         <Footer/>
         
