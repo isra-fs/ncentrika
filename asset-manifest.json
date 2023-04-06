@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "https://isra-fs.github.io/ncentrika/static/css/main.d52b931d.css",
-    "main.js": "https://isra-fs.github.io/ncentrika/static/js/main.f8881ae1.js",
-    "service-worker.js": "https://isra-fs.github.io/ncentrika/service-worker.js",
-    "index.html": "https://isra-fs.github.io/ncentrika/index.html",
-    "main.d52b931d.css.map": "https://isra-fs.github.io/ncentrika/static/css/main.d52b931d.css.map",
-    "main.f8881ae1.js.map": "https://isra-fs.github.io/ncentrika/static/js/main.f8881ae1.js.map"
+    "main.css": "/static/css/main.5737dc12.css",
+    "main.js": "/static/js/main.f895f2f1.js",
+    "service-worker.js": "/service-worker.js",
+    "index.html": "/index.html",
+    "main.5737dc12.css.map": "/static/css/main.5737dc12.css.map",
+    "main.f895f2f1.js.map": "/static/js/main.f895f2f1.js.map"
   },
   "entrypoints": [
-    "static/css/main.d52b931d.css",
-    "static/js/main.f8881ae1.js"
+    "static/css/main.5737dc12.css",
+    "static/js/main.f895f2f1.js"
   ]
 }
