@@ -1,55 +1,65 @@
-import React from 'react';
-
+import React, { useEffect, useState, useRef } from 'react';
+import { getReviewsfromGoogle } from '../services/googleReviews';
+import { Slide } from 'react-slideshow-image';
+import 'react-slideshow-image/dist/styles.css';
 const Testimonials = () => {
-    function stopDefAction(evt) { 
-        console.log(evt) 
-        // evt.preventDefault();  
-        // evt.preventDefault();
-        // evt.stopPropagation()
-        return false;
-      } 
+    const [reviewsList, setReviewsList] = useState([]);
+    const [index, setIndex] = React.useState(0);
+    const colors = ["#0088FE", "#00C49F", "#FFBB28"];
+
+    useEffect(() => {
+        setIndex((prevIndex) =>
+            prevIndex === colors.length - 1 ? 0 : prevIndex + 1
+        )
+        getReviewsfromGoogleList()
+    }, [])
+
+    const getReviewsfromGoogleList = async () => {
+        try {
+           const reviewList = await getReviewsfromGoogle();
+            setReviewsList(reviewList)
+        } catch (error) {
+            console.log(error);
+        }
+
+    };
+
+
     return (
         <section className='section-testimonials'>
-            <div className='testimonials-opinions'>
-                <img src='resources/images/backgroundTestimonials.svg' alt='backgroundTestimonials' />
-
-                <div>
-                    <div class="slider">
-                        <div class="slides">
-                            <div id="slides__1" class="slide">
-                                <iframe title='opinion1' src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02Ktq6FZeg6vSrTSpXGAEFpKVEMmtXrQ3VFJNY3iNRRq4r71wT8dP5syPGyZ8uHgrWl%26id%3D100005317657227&show_text=true&width=500"
-
-                                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                                <a class="slide__prev" href="#slides__4" title="Next" onClick={stopDefAction}></a>
-                                <a class="slide__next" href="#slides__2" title="Next"onClick={stopDefAction}></a>
+           {reviewsList.length > 0 &&
+            <Slide autoplay={false}>
+                {
+                    reviewsList.map((item, index) => {
+                        return (
+                            <div className="each-slide-effect" key={index}>
+                                <a  target="_blank"
+                                href={item.author_url} data-action="share/whatsapp/share" rel="noreferrer">
+                                <div>
+                                    
+                                    <div className='testimonal-user'>
+                                        <img src={item.profile_photo_url} alt={index}></img>
+                                        <div>
+                                            <h2>{item.author_name}</h2>
+                                            <div>
+                                            {Array.from(Array(item.rating), (e, i) => {
+                                                return <i class="star" key={i}></i>
+                                            })}
+                                            
+                                            <h6>{item.relative_time_description}</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>{item.text}</p>
+                                </div>
+                                </a>
                             </div>
-                            <div id="slides__2" class="slide">
-                                <iframe title='opinion2' src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmildret.sosa%2Fposts%2Fpfbid02pvQuZteKrJqZKZQCHNKLkyuMK582hGHEoGxkaxSnekhZAYPidWANnHUWVhQWuWN2l&show_text=true&width=500"
-
-                                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                                <a class="slide__prev" href="#slides__1" title="Prev"></a>
-                                <a class="slide__next" href="#slides__3" title="Next"></a>
-                            </div>
-                            <div id="slides__3" class="slide">
-                                <iframe title='opinion3' src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpauliina.pez%2Fposts%2Fpfbid0CYapdmpU7JK1sBCXpFBwCCJvQyoBZPGzFvUDDhEjxp1x3Qq98dHtjb1rPMrRrYV7l&show_text=true&width=500"
-                                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                                <a class="slide__prev" href="#slides__2" title="Prev"></a>
-                                <a class="slide__next" href="#slides__4" title="Next"></a>
-                            </div>
-                            <div id="slides__4" class="slide">
-                                <iframe title='opinion4' src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fbayron.bonillachico%2Fposts%2Fpfbid02YWKUH2s8KibAAecW2u1XdbTDUN4tXVt2KT1Lvx7moD9i8ZFhmHimfgMzmuqnAcTMl&show_text=true&width=500"
-                                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                                <a class="slide__prev" href="#slides__3" title="Prev"></a>
-                                <a class="slide__next" href="#slides__1" title="Prev"></a>
-                            </div>
-                        </div>
-               
-                    </div>
-                </div>
-
-            </div>
-
+                        )
+                    })
+                }
+            </Slide> }
         </section>
+
     )
 }
 
