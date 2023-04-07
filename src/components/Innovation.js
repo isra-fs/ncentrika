@@ -35,9 +35,7 @@ const Innovation = () => {
                         extraClass='show-more-elements'
                          onclick={handleClick}
                         />
-                   <Facilities/>
             </div>
-     
         </section>
     )
 }

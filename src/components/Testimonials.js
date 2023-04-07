@@ -23,10 +23,9 @@ const Testimonials = () => {
         }
 
     };
-
-
     return (
         <section className='section-testimonials'>
+            <h1>La satisfacción de nuestros pacientes es nuestra razón de ser</h1>
            {reviewsList.length > 0 &&
             <Slide autoplay={false}>
                 {
@@ -50,7 +49,12 @@ const Testimonials = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <p>{item.text}</p>
+                                    {
+                                        item.text.length >300 ?
+                                        <p>{`${item.text.substring(1,300)}`}<strong>...Leer mas</strong></p>
+                                        :<p>{item.text}</p>
+                                    }
+                                    
                                 </div>
                                 </a>
                             </div>

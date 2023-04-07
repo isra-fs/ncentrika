@@ -66,7 +66,7 @@ const InnovationList = () => {
                 </p>
             </div>
             <div className="col-md-auto">
-                <img src='resources/images/5.jpg' alt='Software Nemoceph'></img>
+                <img src='resources/images/5.webp' alt='Software Nemoceph'></img>
             </div>
             <div className="col-md-auto">
                 <h1>Software Nemoceph</h1>

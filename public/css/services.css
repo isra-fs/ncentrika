@@ -65,7 +65,8 @@
         text-align: left;
     }
     .col-md-auto > div.image-container{
-        width: 150px;
+        width: 200px;
+        margin: 0 auto;
     }
     .col-md-auto > div.image-container >img{
         width: 100%;
