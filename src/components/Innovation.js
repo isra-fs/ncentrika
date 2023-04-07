@@ -20,7 +20,7 @@ const Innovation = () => {
     return (
         <section id="Innovation" className='section-innovation'>
             <div className='container'>
-                <h1>Innovación en tecnología</h1>
+                <h1 className='section-title'>Innovación en tecnología</h1>
                 <ul id="innovationPreview">
                     <li>Laser diodo en odontología pediátrica</li>
                     <li>Itero (Scanner dental)</li>

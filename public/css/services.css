@@ -17,13 +17,13 @@
     width: 100%;
 
 }
+
 .conteiner-services h1{
     font-family: 'OpenSans-Bold';
     font-size: 48px;
     text-transform: none;
     margin-bottom: 40px;
     color: #3B3937;
-
 }
 .conteiner-services .services-list{
     width: 1140px;
@@ -60,6 +60,7 @@
     display: none;
 }
 @media (max-width: 990px){
+    
     .row.justify-content-md-center .col-md-auto > p,
     .row.justify-content-md-center .col-md-auto > h1{
         text-align: left;
@@ -73,6 +74,6 @@
     }
     .conteiner-services h1{
         font-size: 30px;
-        margin-top: 20px;
     }
+  
 }

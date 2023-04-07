@@ -3,7 +3,7 @@ const Appointment = () => {
 	return (
 		<section id="Appointment" className='section-appointment'>
 			<div className='container'>
-				<h1>Métodos de pago</h1>
+				<h1 className='section-title'>Métodos de pago</h1>
 				<ul >
 					<li>Efectivo</li>
 					<li>Tarjeta de crédito o débito</li>

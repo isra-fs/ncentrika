@@ -16,7 +16,7 @@ const Services = () => {
         <section id="Services" className='section-services'>
             <div className='conteiner-services'>
                 <div className="container">
-                    <h1>Servicios</h1>
+                <h1 className='section-title'>Servicios</h1>
                     <div className="row justify-content-md-center">
                         <div className="col-md-auto">
                             <div className='image-container'><img src='resources/images/odontologia_bebe.svg' alt='Odontologia bebe'></img></div>

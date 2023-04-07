@@ -25,7 +25,7 @@ const Testimonials = () => {
     };
     return (
         <section className='section-testimonials'>
-            <h1>La satisfacción de nuestros pacientes es nuestra razón de ser</h1>
+            <h1 className='section-title'>La satisfacción de nuestros pacientes es nuestra razón de ser</h1>
            {reviewsList.length > 0 &&
             <Slide autoplay={false}>
                 {

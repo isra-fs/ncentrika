@@ -4,7 +4,7 @@ const About = () =>{
     return(
         <section id="About" className='section-about'>
              <div className='container'>
-                <h1>Nuestra experiencia</h1>
+                <h1 className='section-title'>Nuestra experiencia</h1>
                 <div className='about-image'>
                     <img src='resources/images/FotoDoctora.Nosotros.png' alt=''/>
                 </div>

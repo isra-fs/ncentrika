@@ -21,7 +21,7 @@ const Facilities = () => {
 	  ];
   return (
     <section className="section-facilities" >
-		  <h1>Nuestras instalaciones</h1>
+		  <h1 className='section-title'>Nuestras instalaciones</h1>
 	<Slide>
          {slideImages.map((slideImage, index)=> (
 			<>
