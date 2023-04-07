@@ -24,6 +24,9 @@
     text-decoration: none !important;
     font-family: 'OpenSans-Bold';
 }
+.section-title{
+    margin-top: 140px !important;
+}
 .header-button{
     background-color: #FFF8F0;
     color: #3B3937;
