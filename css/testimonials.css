@@ -4,6 +4,16 @@
   padding-bottom: 40px;
 }
 
+.section-testimonials>h1 {
+  font-family: 'OpenSans-Bold';
+  font-size: 30px;
+  text-transform: none;
+  margin-bottom: 40px;
+  color: #3B3937;
+  margin-top: 30px;
+  text-align: center;
+}
+
 .testimonials-opinions {
   display: grid;
   align-items: center;
@@ -56,6 +66,11 @@
   overflow-wrap: break-word;
   text-align: center;
   margin-top: 25px;
+}
+.each-slide-effect a>div>p  >strong{
+  font-family: 'OpenSans-Bold';
+  font-size: 20px;
+  color: #3B3937;
 }
 
 .react-slideshow-container {
@@ -188,9 +203,10 @@ button:focus {
 .section-testimonials .testimonal-user div>h6 {
   font-family: 'OpenSans-Bold';
   color: #3B3937;
-  font-size: 14px;
-  margin:0px 0px 0px 10px;
-  align-self: center;
+  font-size: 18px;
+  margin: 0px 15px;
+  letter-spacing: 0px;
+  text-transform: none;
 }
 
 .section-testimonials .testimonal-user div>h2 {
@@ -198,12 +214,26 @@ button:focus {
   font-family: 'OpenSans-Bold';
   color: #3B3937;
   font-size: 18px;
+  line-height: 30px;
+}
+
+.section-testimonials .react-slideshow-wrapper .images-wrap {
+  justify-content: center;
+}
+
+.section-testimonials .react-slideshow-wrapper .images-wrap>div {
+  align-self: center;
+  padding: 20px 0px;
 }
 
 .testimonal-user>img {
   margin-right: 20px;
-  height: 80px;
 }
+
+/* .section-testimonials .react-slideshow-wrapper.slide{
+  padding-top: 70px;
+  padding-bottom: 70px;
+} */
 
 .star {
   position: relative;
@@ -256,6 +286,15 @@ button:focus {
     padding: 40px 0px;
   }
 
+  .each-slide-effect a>div {
+    height: auto;
+  }
+
+  .section-testimonials>h1 {
+    margin: 20px 20px;
+
+  }
+
 }
 
 
@@ -277,6 +316,22 @@ button:focus {
   }
 
   .react-slideshow-container {
-    width: 95%;
+    width: 100%;
+  }
+
+  .section-testimonials .testimonal-user div>h6 {
+    display: none;
+  }
+  
+  .section-testimonials .testimonal-user div>div{
+    justify-content: left;
+  }
+
+  .section-testimonials .testimonal-user div{
+    width: 200px;
+  }
+
+  .testimonal-user>img {
+    width: 80px;
   }
 }
