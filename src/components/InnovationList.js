@@ -7,7 +7,7 @@ const InnovationList = () => {
 
         <div className="row justify-content-md-center hide-innovation-list" id="hideInnovationList">
             <div className="col-md-auto" >
-                <img src='resources/images/1.jpg' alt='Laser diodo en odontología pediátrica'></img>
+                <img src='resources/images/1.webp' alt='Laser diodo en odontología pediátrica'></img>
             </div>
             <div className="col-md-auto">
                 <h1>Laser diodo en odontología pediátrica</h1>
@@ -22,7 +22,7 @@ const InnovationList = () => {
                 </ul>
             </div>
             <div className="col-md-auto">
-                <img src='resources/images/2.jpg' alt='Itero (Scanner dental)'></img>
+                <img src='resources/images/2.webp' alt='Itero (Scanner dental)'></img>
             </div>
             <div className="col-md-auto">
                 <h1>Itero (Scanner dental)</h1>
@@ -34,7 +34,7 @@ const InnovationList = () => {
                 </ul>
             </div>
             <div className="col-md-auto">
-                <img src='resources/images/3.jpg' alt='Radiografía digital'></img>
+                <img src='resources/images/3.webp' alt='Radiografía digital'></img>
             </div>
             <div className="col-md-auto">
                 <h1>Radiografía digital</h1>
@@ -51,7 +51,7 @@ const InnovationList = () => {
 
 
             <div className="col-md-auto ">
-                <img src='resources/images/4.jpg' alt='Software de lectura de tomografía'></img>
+                <img src='resources/images/4.webp' alt='Software de lectura de tomografía'></img>
             </div>
             <div className="col-md-auto">
                 <h1>Software de lectura de tomografía</h1>
@@ -66,7 +66,7 @@ const InnovationList = () => {
                 </p>
             </div>
             <div className="col-md-auto">
-                <img src='resources/images/5.webp' alt='Software Nemoceph'></img>
+                <img src='resources/images/5.gif' alt='Software Nemoceph'></img>
             </div>
             <div className="col-md-auto">
                 <h1>Software Nemoceph</h1>
@@ -77,7 +77,7 @@ const InnovationList = () => {
                 </p>
             </div>
             <div className="col-md-auto">
-                <img src='resources/images/6.jpg' alt='Articulador AD2'></img>
+                <img src='resources/images/6.webp' alt='Articulador AD2'></img>
             </div>
             <div className="col-md-auto">
                 <h1>Articulador AD2</h1>
