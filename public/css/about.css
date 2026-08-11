@@ -21,7 +21,10 @@
     float: left;
 }
 .section-about .about-image img{
-    width: 100%;
+    width: 70%;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    object-fit: cover;
 }
 .section-about .about-description{
     width: 50%;

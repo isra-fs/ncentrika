@@ -4,19 +4,19 @@ import Navbar from './Navbar';
 const Footer = () => {
     return (
         <footer id="Footer" className='footer-footer'>
-            <div class="ticker-wrap">
-                <div class="ticker">
-                    <div class="ticker__item"> <img src='resources/images/Logo-Ins.Aetna.svg' alt='Logo-Ins.Aetna' /></div>
-                    <div class="ticker__item"><img src='resources/images/Logo-Ins.Assurant.svg' alt='Logo-Ins.Assurant' /></div>
-                    <div class="ticker__item"><img src='resources/images/Logo-Ins.Cigna.svg' alt='Logo-Ins.Cigna' /></div>
-                    <div class="ticker__item"><img src='resources/images/Logo-Ins.DentaDental.svg' alt='Logo-Ins.DentaDental' /></div>
-                    <div class="ticker__item"><img src='resources/images/Logo-Ins.Metlife.svg' alt='Logo-Ins.Metlife' /></div>
-                    <div class="ticker__item"><img src='resources/images/Logo-Ins.PacifiCare.svg' alt='Logo-Ins.PacifiCare' /></div>
-                    <div class="ticker__item"><img src='resources/images/Logo-Ins.DentaDental.svg' alt='Logo-Ins.DentaDental' /></div>
+            <div className="ticker-wrap">
+                <div className="ticker">
+                    <div className="ticker__item"> <img src='resources/images/Logo-Ins.Aetna.svg' alt='Logo-Ins.Aetna' /></div>
+                    <div className="ticker__item"><img src='resources/images/Logo-Ins.Assurant.svg' alt='Logo-Ins.Assurant' /></div>
+                    <div className="ticker__item"><img src='resources/images/Logo-Ins.Cigna.svg' alt='Logo-Ins.Cigna' /></div>
+                    <div className="ticker__item"><img src='resources/images/Logo-Ins.DentaDental.svg' alt='Logo-Ins.DentaDental' /></div>
+                    <div className="ticker__item"><img src='resources/images/Logo-Ins.Metlife.svg' alt='Logo-Ins.Metlife' /></div>
+                    <div className="ticker__item"><img src='resources/images/Logo-Ins.PacifiCare.svg' alt='Logo-Ins.PacifiCare' /></div>
+                    <div className="ticker__item"><img src='resources/images/Logo-Ins.DentaDental.svg' alt='Logo-Ins.DentaDental' /></div>
                 </div>
             </div>
             <div className='footer-information'>
-                <di className="container">
+                <div className="container">
                     <img src='resources/images/logo.svg' alt='Ncentrika' className='ncentrika-logo' />
                     <ul>
                         <li>664 6706182 | 664 7656045</li>
@@ -41,7 +41,7 @@ const Footer = () => {
                             <img src='resources/images/socialmedia-googlemaps-white.svg'
                                 alt='socialmedia-map' /></a>Google Maps</li>
                     </ul>
-                </di>
+                </div>
             </div>
             <img src='resources/images/Fondo-Footer.svg' alt='Fondo-Footer'className='background-footer-destock' />
             <img src='resources/images/fondo-footer-phone.svg' alt='Fondo-Footer' className='background-footer-phone' />

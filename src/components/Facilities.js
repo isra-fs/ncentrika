@@ -23,15 +23,15 @@ const Facilities = () => {
     <section className="section-facilities" >
 		  <h1 className='section-title'>Nuestras instalaciones</h1>
 	<Slide>
-         {slideImages.map((slideImage, index)=> (
-			<>
-				<div key={slideImage.id} >
+         {slideImages.map((slideImage)=> (
+			<React.Fragment key={slideImage.id}>
+				<div>
 					<div className='slide-facilities-img'>
 						<div style={{'backgroundImage': `url(${slideImage.url})` }}></div>
 					</div>
 				</div>
 				<div className='slide-botton-background'></div>
-			</>
+			</React.Fragment>
           ))} 
 		  
         </Slide>

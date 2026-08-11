@@ -42,7 +42,7 @@ const Testimonials = () => {
                                             <h2>{item.author_name}</h2>
                                             <div>
                                             {Array.from(Array(item.rating), (e, i) => {
-                                                return <i class="star" key={i}></i>
+                                                return <i className="star" key={i}></i>
                                             })}
                                             
                                             <h6>{item.relative_time_description}</h6>
