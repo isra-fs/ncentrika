@@ -6,7 +6,7 @@ const About = () =>{
              <div className='container'>
                 <h1 className='section-title'>Nuestra experiencia</h1>
                 <div className='about-image'>
-                    <img src='resources/images/doctora.webp' alt=''/>
+                    <img src='resources/images/doctora.webp' alt='Dra. Karla Bonilla, odontopediatra en Ncéntrika'/>
                 </div>
                 <div className='about-description'>
                     <h2>Dra. Karla Bonilla</h2>

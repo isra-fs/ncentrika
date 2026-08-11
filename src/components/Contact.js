@@ -24,9 +24,9 @@ const Contact = () => {
                                 #10488 Zona Urbana Rio
                                 C.P. 23010 Tijuana B.C. México</p>
                             <div>
-                                <p>Teléfono: 664 6804029 <br />
+                                <p>Teléfono: 664 6858610 <br />
                                     <strong>Whatsapp:</strong><br />
-                                    664 6706182 | 664 7656045</p>
+                                    664 6706182</p>
                                 <AppoinmentButton text={'Llamar'} extraClass="contact-appoinment" />
                                 <div className='contact-social-network'>
 
