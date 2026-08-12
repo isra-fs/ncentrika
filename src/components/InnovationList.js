@@ -7,7 +7,14 @@ const InnovationList = () => {
 
         <div className="row justify-content-md-center hide-innovation-list" id="hideInnovationList">
             <div className="col-md-auto" >
-                <img src='resources/images/1.webp' alt='Laser diodo en odontología pediátrica'></img>
+                <img
+                    src='resources/images/1.webp'
+                    alt='Laser diodo en odontología pediátrica'
+                    width={300}
+                    height={225}
+                    loading='lazy'
+                    decoding='async'
+                />
             </div>
             <div className="col-md-auto">
                 <h1>Laser diodo en odontología pediátrica</h1>
@@ -22,7 +29,14 @@ const InnovationList = () => {
                 </ul>
             </div>
             <div className="col-md-auto">
-                <img src='resources/images/2.webp' alt='Itero (Scanner dental)'></img>
+                <img
+                    src='resources/images/2.webp'
+                    alt='Itero (Scanner dental)'
+                    width={300}
+                    height={400}
+                    loading='lazy'
+                    decoding='async'
+                />
             </div>
             <div className="col-md-auto">
                 <h1>Itero (Scanner dental)</h1>
@@ -34,7 +48,14 @@ const InnovationList = () => {
                 </ul>
             </div>
             <div className="col-md-auto">
-                <img src='resources/images/3.webp' alt='Radiografía digital'></img>
+                <img
+                    src='resources/images/3.webp'
+                    alt='Radiografía digital'
+                    width={300}
+                    height={213}
+                    loading='lazy'
+                    decoding='async'
+                />
             </div>
             <div className="col-md-auto">
                 <h1>Radiografía digital</h1>
@@ -51,7 +72,14 @@ const InnovationList = () => {
 
 
             <div className="col-md-auto ">
-                <img src='resources/images/4.webp' alt='Software de lectura de tomografía'></img>
+                <img
+                    src='resources/images/4.webp'
+                    alt='Software de lectura de tomografía'
+                    width={300}
+                    height={225}
+                    loading='lazy'
+                    decoding='async'
+                />
             </div>
             <div className="col-md-auto">
                 <h1>Software de lectura de tomografía</h1>
@@ -66,7 +94,14 @@ const InnovationList = () => {
                 </p>
             </div>
             <div className="col-md-auto">
-                <img src='resources/images/5.gif' alt='Software Nemoceph'></img>
+                <img
+                    src='resources/images/5.gif'
+                    alt='Software Nemoceph'
+                    width={300}
+                    height={282}
+                    loading='lazy'
+                    decoding='async'
+                />
             </div>
             <div className="col-md-auto">
                 <h1>Software Nemoceph</h1>
@@ -77,7 +112,14 @@ const InnovationList = () => {
                 </p>
             </div>
             <div className="col-md-auto">
-                <img src='resources/images/6.webp' alt='Articulador AD2'></img>
+                <img
+                    src='resources/images/6.webp'
+                    alt='Articulador AD2'
+                    width={300}
+                    height={225}
+                    loading='lazy'
+                    decoding='async'
+                />
             </div>
             <div className="col-md-auto">
                 <h1>Articulador AD2</h1>

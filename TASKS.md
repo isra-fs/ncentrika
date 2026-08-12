@@ -10,7 +10,7 @@ Referencia: diagnóstico del sitio (CRA + CSS en `public/` + media pesada).
 
 | Fase | Nombre | Esfuerzo | Estado |
 |------|--------|----------|--------|
-| 0 | Quick wins (peso) | S | 🟡 En curso (0.1 hecho) |
+| 0 | Quick wins (peso) | S | 🟡 En curso (0.1–0.2 hechos) |
 | 1 | Consistencia (tokens / CSS) | M | ⬜ Pendiente |
 | 2 | Tailwind (opcional) | L | ⬜ No iniciar aún |
 
@@ -28,11 +28,11 @@ Referencia: diagnóstico del sitio (CRA + CSS en `public/` + media pesada).
 - [ ] Verificar LCP cualitativo en mobile y desktop
 
 ### 0.2 Assets no usados / sobredimensionados (P0)
-- [ ] **No** incluir en deploy los `IMG_*.PNG` / `IMG_2219.JPEG` si no están referenciados en código
+- [x] **No** incluir en deploy los `IMG_*.PNG` / `IMG_2219.JPEG` si no están referenciados en código
 - [ ] Si se van a usar: convertir a WebP, redimensionar, &lt; ~150–200 KB c/u, y actualizar componentes
-- [ ] Comprimir `3.webp`, `6.webp`, `doctora.webp`
-- [ ] Confirmar y eliminar `acordion1.png` si solo se usa `acordion1.webp`
-- [ ] Añadir `loading="lazy"` + `width`/`height` (o aspect-ratio) en imágenes below-the-fold
+- [x] Comprimir `3.webp`, `6.webp`, `doctora.webp`
+- [x] Confirmar y eliminar `acordion1.png` si solo se usa `acordion1.webp`
+- [x] Añadir `loading="lazy"` + `width`/`height` (o aspect-ratio) en imágenes below-the-fold
 
 ### 0.3 CSS / deps muertos (P0–P1)
 - [ ] Quitar Font Awesome de `public/index.html` (`font-awesome.min.css`)
@@ -52,6 +52,7 @@ Referencia: diagnóstico del sitio (CRA + CSS en `public/` + media pesada).
 | Fecha | build/ MB | Notas |
 |-------|-----------|-------|
 | 2026-08-12 | — | Hero MP4: 3523 KB → 379 KB; poster WebP 16 KB; un solo `<video>` |
+| 2026-08-12 | — | Assets: 3/6/doctora webp −1.45 MB; acordion1.png −334 KB; IMG_* → `assets-raw/` (fuera de build) |
 
 ---
 
@@ -113,7 +114,7 @@ Referencia: diagnóstico del sitio (CRA + CSS en `public/` + media pesada).
 Usar como tickets concretos; marcar al completar. Prompts listos abajo (copiar/pegar en el agente).
 
 1. [x] **Hero video** → [Prompt 1](#prompt-1--hero-video)
-2. [ ] **Higiene assets** → [Prompt 2](#prompt-2--higiene-de-assets)
+2. [x] **Higiene assets** → [Prompt 2](#prompt-2--higiene-de-assets)
 3. [ ] **Dead weight CSS/deps** → [Prompt 3](#prompt-3--dead-weight-css--deps)
 4. [ ] **Design tokens** → [Prompt 4](#prompt-4--design-tokens)
 5. [ ] **Bootstrap out + lazy** → [Prompt 5](#prompt-5--bootstrap-out--lazy-secciones)
@@ -250,7 +251,7 @@ Al final: build OK, tamaño build, checklist visual breve, marcar issue 5 + 1.2/
 
 | Tema | Decisión | Fecha |
 |------|----------|-------|
-| ¿Usar los `IMG_*.PNG` nuevos? | ⬜ Sí (comprimidos) / ⬜ No (fuera del repo/deploy) | |
+| ¿Usar los `IMG_*.PNG` nuevos? | ⬜ Sí (comprimidos) / ⬜ No (fuera del repo/deploy) — hoy en `assets-raw/` (gitignore), no en `public/` ni build | 2026-08-12 |
 | ¿Migrar a Tailwind? | ⬜ Sí (Fase 2) / ⬜ No (quedarse en CSS + tokens) | |
 | ¿Fusionar Contact + horarios + mapa? | ⬜ Sí / ⬜ No | |
 
@@ -263,3 +264,4 @@ Al final: build OK, tamaño build, checklist visual breve, marcar issue 5 + 1.2/
 | | Diagnóstico inicial (sin implementar). Creado este archivo. |
 | | Añadidos 5 prompts ejecutables (issues 1–5). |
 | 2026-08-12 | Prompt 1 Hero video: 1× `<video>`, poster WebP 13 KB, MP4 3.5 MB → 379 KB (1080 CRF26), IO + preload=none. |
+| 2026-08-12 | Prompt 2 Higiene assets: IMG_* → `assets-raw/` (~12.8 MB fuera de deploy); `acordion1.png` eliminado; 3/6/doctora reencode; lazy+dims en About/InnovationList/AboutDetails/Footer. Facilities usa `background-image` (lazy N/A). Pendiente opcional: 1/2/4.webp siguen ~4K. |

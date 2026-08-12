@@ -66,6 +66,7 @@
 }
 .section-innovation .col-md-auto img {
     width: 300px;
+    height: auto;
     border-radius: 30px;
 }
 

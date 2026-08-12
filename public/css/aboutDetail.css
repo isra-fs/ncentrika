@@ -23,6 +23,7 @@
   }
   .gallery-wrap > div > img {
         height: 400px;
+        width: auto;
         float: right;
         display: none;
   }

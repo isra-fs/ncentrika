@@ -22,3 +22,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 /svg/
+
+# Raw camera dumps — not in site yet; keep out of public/ (and thus build/) until compressed + wired
+/assets-raw/
+/public/resources/images/IMG_*.PNG
+/public/resources/images/IMG_*.JPEG
+/public/resources/images/IMG_*.JPG

@@ -22,6 +22,7 @@
 }
 .section-about .about-image img{
     width: 70%;
+    height: auto;
     border-radius: 50%;
     aspect-ratio: 1;
     object-fit: cover;

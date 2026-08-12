@@ -18,7 +18,14 @@ const AboutDetails = () => {
                         Ced. Especialista: 10487345<br/>
                         Universidad Autónoma de Baja California
                         </p>
-                        <img src='resources/images/acordion1.webp' alt='Odontologia bebe'></img>
+                        <img
+                            src='resources/images/acordion1.webp'
+                            alt='Odontologia bebe'
+                            width={262}
+                            height={400}
+                            loading='lazy'
+                            decoding='async'
+                        />
                     </div>
                     <div className="item item-2"> <h1>Visión</h1>
                     <p>Fomentar y proteger la salud integral y oral de nuestros 
@@ -27,7 +34,14 @@ const AboutDetails = () => {
                         atención dental que genere experiencias positivas y extraordinarias 
                         para nuestros pacientes y su familia.
                         </p>
-                        <img src='resources/images/acordion1.webp' alt='Odontologia bebe'></img>
+                        <img
+                            src='resources/images/acordion1.webp'
+                            alt='Odontologia bebe'
+                            width={262}
+                            height={400}
+                            loading='lazy'
+                            decoding='async'
+                        />
                     </div>
                     <div className="item item-3" ><h1>Misión</h1>
                     <p>Fomentar y proteger la salud integral y oral de nuestros pacientes 
@@ -36,14 +50,28 @@ const AboutDetails = () => {
                         dental que genere experiencias positivas y extraordinarias 
                         para nuestros pacientes y su familia.
                         </p>
-                        <img src='resources/images/acordion1.webp' alt='Odontologia bebe'></img>
+                        <img
+                            src='resources/images/acordion1.webp'
+                            alt='Odontologia bebe'
+                            width={262}
+                            height={400}
+                            loading='lazy'
+                            decoding='async'
+                        />
                     </div>
                     <div className="item item-4" id='defaultOn'><h1>Valores</h1>
                         <p>Los valores en los que estamos sustentados son una gran pasión por nuestro trabajo y 
                             el bienestar de nuestros pacientes, un compromiso con la salud de los niños y 
                             sus familias trabajando con gran humanismo, solidaridad, ética, respeto y honradez.
                         </p>
-                        <img src='resources/images/acordion1.webp' alt='Odontologia bebe'></img>
+                        <img
+                            src='resources/images/acordion1.webp'
+                            alt='Odontologia bebe'
+                            width={262}
+                            height={400}
+                            loading='lazy'
+                            decoding='async'
+                        />
                     </div>
                 </div>
             </div>
