@@ -7,7 +7,7 @@ header{
     align-items: flex-end;
     justify-content: center;
     z-index: 999;
-    background-color: #99BFE5;
+    background-color: var(--color-blue);
    
 }
 .top-header{
@@ -37,10 +37,10 @@ header{
 }
 .nav-big-link{
     cursor: pointer;
-    color: #3B3937;
+    color: var(--color-text);
     text-decoration: none !important;
     margin-right: 14px;
-    font-family: 'OpenSans-Bold';
+    font-family: var(--font-bold);
     font-size: 15px;
 }
 .nav-small{

@@ -1,5 +1,4 @@
-
-  .section-about-detail{
+.section-about-detail{
     margin-top: 40px;
     margin-bottom: 40px;
   }
@@ -11,11 +10,11 @@
  
   }
   .gallery-wrap > div > p strong{
-    font-family: "OpenSans-bold";
+    font-family: var(--font-bold);
   }
   .gallery-wrap > div > p {
     font-size: 15px;
-    font-family: "OpenSans-Regular";
+    font-family: var(--font-regular);
     float: left;
     width: 40%;
     margin-top: 100px;
@@ -32,7 +31,7 @@
     font-size: 18px;
     transform: rotate(90deg);
     margin-top: 150px;
-    font-family: 'OpenSans-Bold';
+    font-family: var(--font-bold);
     color: white;
     display: block;
     -webkit-animation-name: fadeIn;
@@ -48,7 +47,7 @@
     
   }
   .item:hover{flex: 1; background-color: white;}
-  .item:hover ~ #defaultOn {flex: .1;  background-color: #FABE15;}
+  .item:hover ~ #defaultOn {flex: .1;  background-color: var(--color-cta);}
   .item:hover ~ #defaultOn h1{ display: block;}
   .item:hover ~ #defaultOn p,.item:hover ~ #defaultOn img{ 
     display: none;
@@ -90,19 +89,19 @@
   }
 
   .item-1 { 
-    background-color: #99BFE5;
+    background-color: var(--color-blue);
   }
   
   .item-2 { 
-    background-color: #92D2C7;
+    background-color: var(--color-mint);
   }
   
   .item-3 { 
-    background-color: #EAA9CB;
+    background-color: var(--color-pink);
   }
   
   .item-4 { 
-    background-color: #FABE15;
+    background-color: var(--color-cta);
   }
   @media (max-width: 900px){
 

@@ -1,3 +1,36 @@
+/* Design tokens — mismos valores de marca; no rediseñar */
+:root {
+    /* Brand colors */
+    --color-mint: #92D2C7;
+    --color-cta: #FABE15;
+    --color-pink: #EAA9CB;
+    --color-blue: #99BFE5;
+    --color-coral: #F98F8A;
+    --color-cream: #FFF8F0;
+    --color-text: #3B3937;
+
+    /* Neutrals used with buttons / surfaces */
+    --color-white: #ffffff;
+    --color-black: #000000;
+
+    /* Typography */
+    --font-bold: 'OpenSans-Bold';
+    --font-regular: 'OpenSans-Regular';
+    --title-size: 48px;
+    --title-size-sm: 30px; /* Testimonials: título largo a propósito */
+
+    /* Spacing */
+    --space-section-title: 140px;
+
+    /*
+      Breakpoints (documentados; Header.js usa width > 1000):
+      --bp-md: 768px
+      --bp-nav: 1000px  (alineado con Header / nav)
+      --bp-lg: 1024px
+      No se unificó todo a 768/1024 en este paso: 990/1000/1180/1200
+      afectan layout real; ver nota en TASKS.md.
+    */
+}
 
 .appoinment-general-button{
     display: inline-block;
@@ -12,40 +45,52 @@
     -ms-flex-align: center;
     align-items: center;
     border-radius: 30px;
-    background-color: #FABE15;
+    background-color: var(--color-cta);
     -webkit-transition: all 400ms ease;
     transition: all 400ms ease;
-    color: #000000;
+    color: var(--color-black);
     font-size: 14px;
     line-height: 26px;
     font-weight: 600;
     text-align: center;
     letter-spacing: 0px;
     text-decoration: none !important;
-    font-family: 'OpenSans-Bold';
+    font-family: var(--font-bold);
 }
+
+/* Títulos de sección unificados (48px). Testimonials override → 30px. */
 .section-title{
-    margin-top: 140px !important;
+    font-family: var(--font-bold);
+    font-size: var(--title-size);
+    color: var(--color-text);
+    text-transform: none;
+    margin-top: var(--space-section-title) !important;
+    /* !important: evita que Bootstrap/heading resets pisen el margen de marca */
 }
+
+.section-testimonials .section-title{
+    font-size: var(--title-size-sm);
+}
+
+/* Variantes de botón (mismas clases usadas desde Button.js) */
 .header-button{
-    background-color: #FFF8F0;
-    color: #3B3937;
+    background-color: var(--color-cream);
+    color: var(--color-text);
 }
 .home-appoinment{
-    color: #3B3937;
+    color: var(--color-text);
 }
 .home-pdf {
-    background-color: #92D2C7;
+    background-color: var(--color-mint);
     padding: 15px 45px;
-    color: #3B3937;
+    color: var(--color-text);
 }
 .contact-appoinment{
-    color: #3B3937;
+    color: var(--color-text);
     padding: 10px 40px;
-
 }
 .contact-appoinment-two{
-    color: #000000;
+    color: var(--color-black);
 }
 .phone-general-button{
     font-weight: bold;
@@ -54,8 +99,11 @@
     margin-right: 20px;
 }
 .form-generalButton{
-    background-color:#FFF;
+    background-color: var(--color-white);
     width: 150px;
+}
+.footer-appoinment-button {
+    background-color: var(--color-white);
 }
 .fixed-mobile{
     position: absolute;
@@ -77,6 +125,5 @@
     font-display: swap;
 }
 section, header{
-    font-family:'OpenSans-Regular';
+    font-family: var(--font-regular);
 }
-

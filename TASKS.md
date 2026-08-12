@@ -11,7 +11,7 @@ Referencia: diagnóstico del sitio (CRA + CSS en `public/` + media pesada).
 | Fase | Nombre | Esfuerzo | Estado |
 |------|--------|----------|--------|
 | 0 | Quick wins (peso) | S | 🟡 En curso (0.1–0.3 hechos; falta 0.4) |
-| 1 | Consistencia (tokens / CSS) | M | ⬜ Pendiente |
+| 1 | Consistencia (tokens / CSS) | M | 🟡 En curso (1.1 hecho; falta 1.2–1.4) |
 | 2 | Tailwind (opcional) | L | ⬜ No iniciar aún |
 
 **Regla:** no empezar Fase 2 hasta cerrar Fase 0 y lo esencial de Fase 1.
@@ -60,7 +60,7 @@ Referencia: diagnóstico del sitio (CRA + CSS en `public/` + media pesada).
 ## Fase 1 — Consistencia (sin rediseño)
 
 ### 1.1 Tokens de diseño
-- [ ] Crear variables CSS de marca en `common.css` (o `tokens.css`), p. ej.:
+- [x] Crear variables CSS de marca en `common.css` (o `tokens.css`), p. ej.:
   - `--color-mint: #92D2C7`
   - `--color-cta: #FABE15`
   - `--color-pink: #EAA9CB`
@@ -69,16 +69,16 @@ Referencia: diagnóstico del sitio (CRA + CSS en `public/` + media pesada).
   - `--color-cream: #FFF8F0`
   - `--color-text: #3B3937`
   - spacing / title size / breakpoints (ideal: 768 y 1024)
-- [ ] Reemplazar hex sueltos por variables **sin cambiar valores**
-- [ ] Unificar `.section-title` (hoy ~48px en casi todo; Testimonials a 30px — decidir y documentar)
-- [ ] Unificar variantes de botón via `Button.js` + clases en `common.css` (mismos colores actuales)
-- [ ] Revisar `.section-title { margin-top: 140px !important }` y `section { font-size: 3rem }` en `index.css`
+- [x] Reemplazar hex sueltos por variables **sin cambiar valores**
+- [x] Unificar `.section-title` (hoy ~48px en casi todo; Testimonials a 30px — decidir y documentar)
+- [x] Unificar variantes de botón via `Button.js` + clases en `common.css` (mismos colores actuales)
+- [x] Revisar `.section-title { margin-top: 140px !important }` y `section { font-size: 3rem }` en `index.css`
 
 ### 1.2 Bootstrap → grid mínimo
 - [ ] Inventariar usos reales: `container`, `row`, `col-md-auto`, `table`, `justify-content-*`
 - [ ] Sustituir por CSS propio equivalente (mismo layout)
 - [ ] Quitar `bootstrap.min.css` de `index.html` cuando no queden clases Bootstrap
-- [ ] Quitar resto púrpura / estilos huérfanos (p. ej. `#6a0dad` en `testimonials.css`)
+- [x] Quitar resto púrpura / estilos huérfanos (p. ej. `#6a0dad` en `testimonials.css`)
 
 ### 1.3 Estructura de producto (opcional pero recomendado)
 - [ ] Facilities: quitar slides duplicados (solo 2 imágenes únicas)
@@ -117,7 +117,7 @@ Usar como tickets concretos; marcar al completar. Prompts listos abajo (copiar/p
 1. [x] **Hero video** → [Prompt 1](#prompt-1--hero-video)
 2. [x] **Higiene assets** → [Prompt 2](#prompt-2--higiene-de-assets)
 3. [x] **Dead weight CSS/deps** → [Prompt 3](#prompt-3--dead-weight-css--deps)
-4. [ ] **Design tokens** → [Prompt 4](#prompt-4--design-tokens)
+4. [x] **Design tokens** → [Prompt 4](#prompt-4--design-tokens)
 5. [ ] **Bootstrap out + lazy** → [Prompt 5](#prompt-5--bootstrap-out--lazy-secciones)
 
 ---
@@ -255,6 +255,10 @@ Al final: build OK, tamaño build, checklist visual breve, marcar issue 5 + 1.2/
 | ¿Usar los `IMG_*.PNG` nuevos? | ⬜ Sí (comprimidos) / ⬜ No (fuera del repo/deploy) — hoy en `assets-raw/` (gitignore), no en `public/` ni build | 2026-08-12 |
 | ¿Migrar a Tailwind? | ⬜ Sí (Fase 2) / ⬜ No (quedarse en CSS + tokens) | |
 | ¿Fusionar Contact + horarios + mapa? | ⬜ Sí / ⬜ No | |
+| Testimonials `.section-title` 30px | ✅ Intencional (título largo); token `--title-size-sm` | 2026-08-12 |
+| Breakpoints → 768/1024 | ⬜ Diferido: Header.js y CSS usan ~1000; unificar en prompt 5 o follow-up | 2026-08-12 |
+| `section { font-size: 3rem }` | ✅ Conservado (legacy; hijos override); no tocar sin QA visual | 2026-08-12 |
+| `.section-title` margin 140px !important | ✅ Conservado vía `--space-section-title` (Bootstrap/heading resets) | 2026-08-12 |
 
 ---
 
@@ -267,3 +271,4 @@ Al final: build OK, tamaño build, checklist visual breve, marcar issue 5 + 1.2/
 | 2026-08-12 | Prompt 1 Hero video: 1× `<video>`, poster WebP 13 KB, MP4 3.5 MB → 379 KB (1080 CRF26), IO + preload=none. |
 | 2026-08-12 | Prompt 2 Higiene assets: IMG_* → `assets-raw/` (~12.8 MB fuera de deploy); `acordion1.png` eliminado; 3/6/doctora reencode; lazy+dims en About/InnovationList/AboutDetails/Footer. Facilities usa `background-image` (lazy N/A). Pendiente opcional: 1/2/4.webp siguen ~4K. |
 | 2026-08-12 | Prompt 3 Dead weight: quitado Font Awesome + CSS; `react-scroll-parallax` + 7 workbox-* no usados; OpenSans Bold/Regular TTF→woff2 (130→58 KB c/u, TTF borrados); eliminados `App.css`, `navigations.js`; import Facilities en Innovation. `npm run build` OK — build/ **4.25 MB**. |
+| 2026-08-12 | Prompt 4 Design tokens: `:root` en `common.css`; hex de marca → `var(--…)`; `.section-title` unificado (48px; Testimonials 30px a propósito); variantes botón en `common.css`; `#6a0dad` → CTA; breakpoints 990/1000/1180/1200 dejados (Header.js = 1000); `section{font-size:3rem}` y margin 140px !important conservados con nota. |

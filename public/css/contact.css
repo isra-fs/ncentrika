@@ -1,41 +1,41 @@
 .section-contact {
-    background-color: #FFF8F0;
+    background-color: var(--color-cream);
     text-align: center;
     padding-bottom: 40px;
 
 }
 .section-table-info{
-    background-color: #FFFFFF;
+    background-color: var(--color-white);
     display:block;
 }
 .contact-map-information{
     margin-top: 30px;
 }
 .section-contact h1{
-    font-family: 'OpenSans-Bold';
-    font-size: 48px;
+    font-family: var(--font-bold);
+    font-size: var(--title-size);
     text-transform: none;
     margin-bottom: 40px;
-    color: #3B3937;
+    color: var(--color-text);
     margin-top: 30px;
 }
 .section-contact .information-contact p{
-    color: #3B3937;
+    color: var(--color-text);
     font-size: 16px;
     /* text-align: justify; */
-    font-family: 'OpenSans-Regular';
+    font-family: var(--font-regular);
     line-height: 26px;
     margin-bottom: 40px;
 }
 .information-contact p >strong{
-    color: #3B3937;
+    color: var(--color-text);
     font-size: 16px;
     /* text-align: justify; */
-    font-family: 'OpenSans-Bold';
+    font-family: var(--font-bold);
     line-height: 26px;
 }
 .section-contact .col-md-auto.contact-form{
-    background-color: #FABE15;
+    background-color: var(--color-cta);
     padding: 37px;
     border-radius: 20px;
   
@@ -48,7 +48,7 @@
 .col-md-auto.contact-form textarea {
     font-size: 14px;
     
-    color: #3B3937;
+    color: var(--color-text);
 }
 .contact-social-network{
     display: grid;
@@ -65,15 +65,15 @@
 }
 
 .section-contact form >div >label{
-    font-family: 'OpenSans-Bold';
+    font-family: var(--font-bold);
     font-size: 14px;
-    color: #3B3937;
+    color: var(--color-text);
     float: left;
     margin-right: 10px;
 }
 .section-contact form > div > input{
     background: transparent;
-    border-bottom: 1px solid #3B3937;
+    border-bottom: 1px solid var(--color-text);
     width: 85%;
     height: 30px;
     float: right;
@@ -83,11 +83,11 @@
 }
 .section-contact form > div >textarea{
     background: transparent;
-    border: 1px solid #3B3937;
+    border: 1px solid var(--color-text);
     border-radius: 15px;
     width: 85%;
     height: 140px;
-    color: #3B3937;
+    color: var(--color-text);
     padding: 10px;
     float: right;
 
@@ -101,17 +101,17 @@
     border-top:0px !important;
     border-bottom:0px !important;
     text-transform: capitalize;
-    font-family: 'OpenSans-Regular';
+    font-family: var(--font-regular);
     font-size: 16px;
     
     
 }
 .table td strong, .table th strong{
-    font-family: 'OpenSans-Bold';
+    font-family: var(--font-bold);
 }
 .table thead th{
-    font-family: 'OpenSans-Bold';
-    color:#3B3937;
+    font-family: var(--font-bold);
+    color: var(--color-text);
     font-size: 25px;
 } 
 .contact-appoinment-two.mobile{
@@ -153,7 +153,7 @@
         display: none;
     }
     .section-contact h1{
-        font-size: 30px;
+        font-size: var(--title-size-sm);
     }
 }
 @media (max-width: 600px){
@@ -165,4 +165,3 @@
     }
 
 }
-

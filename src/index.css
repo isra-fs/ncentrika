@@ -21,6 +21,7 @@ section{
   display: flex;
   justify-content: center;
   align-items: center;
+  /* Legacy: hijos suelen override; no bajar a 1rem aquí (riesgo visual) */
   font-size: 3rem;
 }
 
@@ -52,7 +53,7 @@ nav{
 }
 
 #sidebar-list{
-  background-color: #99BFE5;
+  background-color: var(--color-blue);
   height: 90vh;
   width: 250px;
   position: absolute;

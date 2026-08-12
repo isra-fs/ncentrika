@@ -1,7 +1,7 @@
 .section-about{
     width: 100%;
-    background-color: #EAA9CB;
-    color: #3B3937;
+    background-color: var(--color-pink);
+    color: var(--color-text);
     background-image: url(../resources/images/backgroundAbout.svg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -9,9 +9,9 @@
     padding-bottom: 30px;
 }
 .section-about h1 {
-    color: #3B3937;
-    font-family: 'OpenSans-Bold';
-    font-size: 48px;
+    color: var(--color-text);
+    font-family: var(--font-bold);
+    font-size: var(--title-size);
     text-transform: none;
     margin-top: 40px;
     margin-bottom: 40px;
@@ -33,18 +33,18 @@
 
 }
 .section-about h2{
-    color: #3B3937;
+    color: var(--color-text);
     text-transform: capitalize;
-    font-size: 30px;
-    font-family: 'OpenSans-Bold';
+    font-size: var(--title-size-sm);
+    font-family: var(--font-bold);
     text-align: right;
 }
 
 .section-about p{
-    color: #3B3937;
+    color: var(--color-text);
     font-size: 16px;
     text-align: right;
-    font-family: 'OpenSans-Bold';
+    font-family: var(--font-bold);
     line-height: 28px;
 }
 @media (max-width: 1000px){
@@ -62,6 +62,6 @@
         text-align: center;
     }
     .section-about h1 {
-        font-size: 30px;
+        font-size: var(--title-size-sm);
     }
 }
