@@ -26,19 +26,6 @@
 .section-appointment  ul li {
     max-width: 700px;
 }
-.section-appointment ul li::before {
-    color: transparent;
-    font-size: 0px;
-    content: "";
-    margin-right: 10px;
-    padding: 10px;
-    background-color: orange;
-    mask-image: url("../resources/images/star-icon.svg");
-    -webkit-mask-image: url("../resources/images/star-icon.svg");
-    -webkit-mask-size: cover;
-    mask-size: cover;
-    vertical-align: top;
-}
 .section-appointment .appointment-description{
     padding: 40px;
 }
@@ -58,12 +45,9 @@
     line-height: 40px;
 }
 
-@media (max-width: 990px){
+@media (max-width: 1000px){
     .section-appointment .appointment-description{
         padding: 0px;
-    }
-    .container{
-        min-width: 100% !important;
     }
     .section-appointment{
         padding-top: 50px;

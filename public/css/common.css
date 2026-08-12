@@ -23,12 +23,12 @@
     --space-section-title: 140px;
 
     /*
-      Breakpoints (documentados; Header.js usa width > 1000):
-      --bp-md: 768px
-      --bp-nav: 1000px  (alineado con Header / nav)
+      Breakpoints (nav JS + CSS alineados):
+      --bp-md: 768px   (grid Bootstrap-compat)
+      --bp-nav: 1000px (Header.js + layouts mobile de sección)
       --bp-lg: 1024px
-      No se unificó todo a 768/1024 en este paso: 990/1000/1180/1200
-      afectan layout real; ver nota en TASKS.md.
+      Secundarios intencionales (densidad, no switch nav):
+      1180 header, 1200 contact/innovation imágenes.
     */
 }
 
@@ -186,4 +186,27 @@
 }
 section, header{
     font-family: var(--font-regular);
+}
+
+/* Listas con viñeta estrella (Innovation + Appointment) */
+.section-innovation ul li::before,
+.section-appointment ul li::before {
+    color: transparent;
+    font-size: 0;
+    content: "";
+    margin-right: 10px;
+    padding: 10px;
+    background-color: orange;
+    mask-image: url("../resources/images/star-icon.svg");
+    -webkit-mask-image: url("../resources/images/star-icon.svg");
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    vertical-align: top;
+}
+
+/* Mobile de sección: mismo corte que Header (1000px) */
+@media (max-width: 1000px) {
+    .container {
+        min-width: 100% !important;
+    }
 }

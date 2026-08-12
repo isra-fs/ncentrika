@@ -5,9 +5,11 @@ import { Link } from 'react-scroll'; // react-scroll is a library for scrolling 
 import SmallScreensNavbar from './SmallScreensNavbar';
 import { useWindowWidthAndHeight } from './CustomHooks';
 import { AppoinmentButton, PhoneButton } from './Button';
+/** Alineado con --bp-nav / @media (max-width: 1000px) en public/css */
+const NAV_BREAKPOINT = 1000;
+
 const Header = () =>{
-    // use our custom hook to get the the window size
-    const [width, height] = useWindowWidthAndHeight();
+    const [width] = useWindowWidthAndHeight();
     return(
         <header>
             <div className="header-inner">
@@ -16,9 +18,7 @@ const Header = () =>{
                       className="logo nav-link">
                       <img src='resources/images/logo.svg' alt='Ncentrika' className='ncentrika-logo'/>
                 </Link>
-                {/*if the width of the window is bigger than 1000px use <Navebar/>,
-                   else user <SmallScreensNavbar/>*/}
-                { width > 1000 ?
+                { width > NAV_BREAKPOINT ?
                 <><Navbar navClass="nav-big"
                 linkClassName="nav-big-link"/>
                 <div className='navbar-button'> 

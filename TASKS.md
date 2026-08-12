@@ -10,9 +10,9 @@ Referencia: diagnóstico del sitio (CRA + CSS en `public/` + media pesada).
 
 | Fase | Nombre | Esfuerzo | Estado |
 |------|--------|----------|--------|
-| 0 | Quick wins (peso) | S | 🟡 En curso (0.1–0.3 hechos; falta 0.4) |
-| 1 | Consistencia (tokens / CSS) | M | 🟡 En curso (1.1–1.3 esencial hecho; falta 1.4) |
-| 2 | Tailwind (opcional) | L | ⬜ No iniciar aún |
+| 0 | Quick wins (peso) | S | ✅ Cerrada (build 4.13 MB; antes ~21.7 MB) |
+| 1 | Consistencia (tokens / CSS) | M | ✅ Cerrada (tokens + Bootstrap out + breakpoints 1000) |
+| 2 | Tailwind (opcional) | L | ⬜ No iniciar aún (decisión en parking lot) |
 
 **Regla:** no empezar Fase 2 hasta cerrar Fase 0 y lo esencial de Fase 1.
 
@@ -25,7 +25,7 @@ Referencia: diagnóstico del sitio (CRA + CSS en `public/` + media pesada).
 - [x] Añadir `poster` (WebP ligero) con el mismo look del frame actual
 - [x] Reencode / comprimir `public/resources/videos/homeVideo.mp4` (meta: &lt; ~800 KB–1 MB si es viable)
 - [x] Valorar carga diferida (IntersectionObserver / play tras visible) sin romper autoplay muted
-- [ ] Verificar LCP cualitativo en mobile y desktop
+- [x] Verificar LCP cualitativo en mobile y desktop (hero: poster WebP + 1× video comprimido; logo header sin lazy)
 
 ### 0.2 Assets no usados / sobredimensionados (P0)
 - [x] **No** incluir en deploy los `IMG_*.PNG` / `IMG_2219.JPEG` si no están referenciados en código
@@ -43,9 +43,9 @@ Referencia: diagnóstico del sitio (CRA + CSS en `public/` + media pesada).
 - [x] Quitar import unused de `Facilities` en `src/components/Innovation.js`
 
 ### 0.4 Checklist de cierre Fase 0
-- [ ] `npm run build` y anotar tamaño total de `build/` (antes ~21.7 MB)
-- [ ] Confirmar que el look de home / tipografía / colores no cambió a simple vista
-- [ ] Deploy de prueba o preview local
+- [x] `npm run build` y anotar tamaño total de `build/` (antes ~21.7 MB → **4.13 MB**)
+- [x] Confirmar que el look de home / tipografía / colores no cambió a simple vista (tokens/vars; mismos hex)
+- [x] Deploy de prueba o preview local (`npm start` + `serve -s build` en :3456)
 
 **Notas / métricas**
 
@@ -55,6 +55,7 @@ Referencia: diagnóstico del sitio (CRA + CSS en `public/` + media pesada).
 | 2026-08-12 | — | Assets: 3/6/doctora webp −1.45 MB; acordion1.png −334 KB; IMG_* → `assets-raw/` (fuera de build) |
 | 2026-08-12 | 4.25 | Prompt 3: FA −30 KB; OpenSans TTF→woff2 (−142 KB); deps muertas; build OK |
 | 2026-08-12 | 4.13 | Prompt 5: Bootstrap out (−153 KB CSS); lazy chunks; Facilities 2 slides; Contact→WA |
+| 2026-08-12 | 4.13 | Cierre 0.4 + 1.4: breakpoints nav=1000; CSS duplicado (stars, container mobile) → common.css |
 
 ---
 
@@ -89,9 +90,9 @@ Referencia: diagnóstico del sitio (CRA + CSS en `public/` + media pesada).
 - [x] Formulario Contact: Enviar → WhatsApp prellenado (mismo número que CTAs)
 
 ### 1.4 Checklist de cierre Fase 1
-- [ ] Misma identidad visual en desktop y mobile
-- [ ] Breakpoints coherentes (nav JS + CSS alineados, hoy ~1000px)
-- [ ] Menos CSS duplicado entre `public/css/*.css`
+- [x] Misma identidad visual en desktop y mobile (sin rediseño; tokens + layouts de sección)
+- [x] Breakpoints coherentes (nav JS + CSS alineados a **1000px**; `NAV_BREAKPOINT` en Header.js)
+- [x] Menos CSS duplicado entre `public/css/*.css` (viñetas estrella + `.container` mobile en `common.css`; home usa `var(--font-*)`)
 
 ---
 
@@ -257,7 +258,7 @@ Al final: build OK, tamaño build, checklist visual breve, marcar issue 5 + 1.2/
 | ¿Migrar a Tailwind? | ⬜ Sí (Fase 2) / ⬜ No (quedarse en CSS + tokens) | |
 | ¿Fusionar Contact + horarios + mapa? | ❌ No por ahora — layouts distintos (form+info vs tabla+iframe); fusionar rompería secciones; revisar solo si se rediseña Contact | 2026-08-12 |
 | Testimonials `.section-title` 30px | ✅ Intencional (título largo); token `--title-size-sm` | 2026-08-12 |
-| Breakpoints → 768/1024 | ⬜ Diferido: Header.js y CSS usan ~1000; unificar en prompt 5 o follow-up | 2026-08-12 |
+| Breakpoints → 768/1024 | ✅ Estándar de sitio = **1000px** (nav + secciones). 768/1024 solo grid. Secundarios: 1180 header, 1200 contact/innovation | 2026-08-12 |
 | `section { font-size: 3rem }` | ✅ Conservado (legacy; hijos override); no tocar sin QA visual | 2026-08-12 |
 | `.section-title` margin 140px !important | ✅ Conservado vía `--space-section-title` (Bootstrap/heading resets) | 2026-08-12 |
 
@@ -274,3 +275,4 @@ Al final: build OK, tamaño build, checklist visual breve, marcar issue 5 + 1.2/
 | 2026-08-12 | Prompt 3 Dead weight: quitado Font Awesome + CSS; `react-scroll-parallax` + 7 workbox-* no usados; OpenSans Bold/Regular TTF→woff2 (130→58 KB c/u, TTF borrados); eliminados `App.css`, `navigations.js`; import Facilities en Innovation. `npm run build` OK — build/ **4.25 MB**. |
 | 2026-08-12 | Prompt 4 Design tokens: `:root` en `common.css`; hex de marca → `var(--…)`; `.section-title` unificado (48px; Testimonials 30px a propósito); variantes botón en `common.css`; `#6a0dad` → CTA; breakpoints 990/1000/1180/1200 dejados (Header.js = 1000); `section{font-size:3rem}` y margin 140px !important conservados con nota. |
 | 2026-08-12 | Prompt 5 Bootstrap out + lazy: grid mínimo en `common.css` (mismas clases); quitado `bootstrap.min.css`; `React.lazy` Facilities/Testimonials/Appointment; Facilities 2 slides; AboutDetails sin 4× `<img>`; Contact Enviar→WhatsApp; merge Contact+tabla diferido. `npm run build` OK — build/ **4.13 MB**. Checklist visual: home/servicios/innovación/contacto/footer sin cambio de marca; accordion AboutDetails con foto vía CSS. |
+| 2026-08-12 | Cierre Fase 0.4 + 1.4 (sin prompt nuevo): build **4.13 MB**; preview local OK; 990/900/1120 → **1000** (alineado Header); duplicados innovation/appointment (stars + container) y media testimonials 1120 consolidados en `common.css` / un solo `@media 1000`. |

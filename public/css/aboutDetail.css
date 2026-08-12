@@ -99,7 +99,7 @@
   .item-4 { 
     background-color: var(--color-cta);
   }
-  @media (max-width: 900px){
+  @media (max-width: 1000px){
 
     .gallery-wrap {
       flex-direction: column;

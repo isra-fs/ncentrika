@@ -59,7 +59,7 @@
 .hide-services {
     display: none;
 }
-@media (max-width: 990px){
+@media (max-width: 1000px){
     
     .row.justify-content-md-center .col-md-auto > p,
     .row.justify-content-md-center .col-md-auto > h1{

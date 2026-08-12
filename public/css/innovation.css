@@ -48,19 +48,6 @@
 .section-innovation  ul li {
     max-width: 700px;
 }
-.section-innovation ul li::before {
-    color: transparent;
-    font-size: 0px;
-    content: "";
-    margin-right: 10px;
-    padding: 10px;
-    background-color: orange;
-    mask-image: url("../resources/images/star-icon.svg");
-    -webkit-mask-image: url("../resources/images/star-icon.svg");
-    -webkit-mask-size: cover;
-    mask-size: cover;
-    vertical-align: top;
-}
 .section-innovation .col-md-auto{
     margin-bottom: 40px;
 }
@@ -83,10 +70,7 @@
     }
     
 }
-@media (max-width: 990px){
-    .container{
-        min-width: 100% !important;
-    }
+@media (max-width: 1000px){
     .section-innovation{
         padding-top: 50px;
     }
