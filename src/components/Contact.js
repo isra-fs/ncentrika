@@ -1,6 +1,29 @@
 import React from 'react';
 import { GeneralButton, AppoinmentButton } from './Button'
+const WHATSAPP_CONTACT = 'https://api.whatsapp.com/send?phone=6646706182';
+
 const Contact = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const form = e.currentTarget;
+        const name = form.elements.namedItem('name').value.trim();
+        const tel = form.elements.namedItem('tel').value.trim();
+        const email = form.elements.namedItem('email').value.trim();
+        const message = form.elements.namedItem('message').value.trim();
+        if (!name || !tel) {
+            return;
+        }
+        const lines = [
+            'Hola, quiero contactar desde la web de Ncéntrika.',
+            `Nombre: ${name}`,
+            `Teléfono: ${tel}`,
+            email ? `E-mail: ${email}` : null,
+            message ? `Mensaje: ${message}` : null,
+        ].filter(Boolean);
+        const url = `${WHATSAPP_CONTACT}&text=${encodeURIComponent(lines.join('\n'))}`;
+        window.open(url, '_blank', 'noopener,noreferrer');
+    };
+
     return (
         <section id="Contact" className='section-contact'>
             <div className='container'>
@@ -8,14 +31,13 @@ const Contact = () => {
                 <div className="row justify-content-md-center">
 
                     <div className="col-md-auto contact-form">
-                        <form>
-                            <div><label>Nombre:*</label><input type="text" id="inputName"></input></div>
-                            <div><label>Télefono:*</label><input type="tel" id="inputTel"></input></div>
-                            <div><label>E-Mail:</label><input type="email" id="inputEmail"></input></div>
-                            <div><label>Mensaje:</label><textarea name="meesage" rows="2" ></textarea></div>
-
+                        <form onSubmit={handleSubmit}>
+                            <div><label htmlFor="inputName">Nombre:*</label><input type="text" id="inputName" name="name" required /></div>
+                            <div><label htmlFor="inputTel">Télefono:*</label><input type="tel" id="inputTel" name="tel" required /></div>
+                            <div><label htmlFor="inputEmail">E-Mail:</label><input type="email" id="inputEmail" name="email" /></div>
+                            <div><label htmlFor="inputMessage">Mensaje:</label><textarea id="inputMessage" name="message" rows="2"></textarea></div>
+                            <GeneralButton text={'Enviar'} extraClass={'form-generalButton'} type="submit" />
                         </form>
-                        <GeneralButton text={'Enviar'} extraClass={'form-generalButton'} />
                     </div>
                     <div className="col-md-auto">
                         <div className='information-contact'>

@@ -20,11 +20,14 @@
     margin-top: 100px;
     display: none;
   }
-  .gallery-wrap > div > img {
-        height: 400px;
-        width: auto;
-        float: right;
-        display: none;
+
+  /* Una sola URL de foto (caché del navegador); sin 4× <img> */
+  .item:hover,
+  #defaultOn {
+    background-image: url('../resources/images/acordion1.webp');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: auto 100%;
   }
 
   .item >h1{
@@ -47,9 +50,9 @@
     
   }
   .item:hover{flex: 1; background-color: white;}
-  .item:hover ~ #defaultOn {flex: .1;  background-color: var(--color-cta);}
+  .item:hover ~ #defaultOn {flex: .1;  background-color: var(--color-cta); background-image: none;}
   .item:hover ~ #defaultOn h1{ display: block;}
-  .item:hover ~ #defaultOn p,.item:hover ~ #defaultOn img{ 
+  .item:hover ~ #defaultOn p{ 
     display: none;
   } 
   .item:hover h1{ display: none;}
@@ -61,16 +64,9 @@
     display: block;
   }
   
-  .item:hover img{ 
-    -webkit-animation-name: fadeIn;
-    -webkit-animation-duration: 2s;
-    animation-name: fadeIn;
-    animation-duration: 2s;
-    display: block;
-  }
   #defaultOn{flex: 1;background-color: white;}
   #defaultOn h1{ display: none;}
-  #defaultOn p, #defaultOn img{ 
+  #defaultOn p{ 
     -webkit-animation-name: fadeIn;
     -webkit-animation-duration: 2s;
     animation-name: fadeIn;
@@ -118,10 +114,14 @@
     .item{
       padding: 0px;
     }
-    .gallery-wrap > div > img {
-      width: 100%;
-      margin: 0 auto;
-      height: auto;
+    .item:hover,
+    #defaultOn {
+      background-position: center bottom;
+      background-size: 100% auto;
+      padding-bottom: 55%;
+    }
+    .item:hover ~ #defaultOn {
+      padding-bottom: 0;
     }
     .gallery-wrap > div > p{
       margin: 20px auto;

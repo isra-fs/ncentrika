@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import Header from './components/Header';
 import Home from './components/Home';
 import About from './components/About';
@@ -7,12 +6,14 @@ import Services from './components/Services';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Innovation from './components/Innovation';
-import Appointment from './components/Appointment';
 import TopHeader from './components/TopHeader';
 import TableContactInfo from './components/TableContactInfo';
 import AboutDetails from './components/AboutDetails';
-import Testimonials from './components/Testimonials';
-import Facilities from './components/Facilities';
+
+const Facilities = lazy(() => import('./components/Facilities'));
+const Testimonials = lazy(() => import('./components/Testimonials'));
+const Appointment = lazy(() => import('./components/Appointment'));
+
 const App = ()=>{
   return(
     <div>
@@ -21,13 +22,19 @@ const App = ()=>{
         <Home/>
         <Services/>
         <Innovation/>
-        <Facilities/>
+        <Suspense fallback={null}>
+          <Facilities/>
+        </Suspense>
         <About/>
         <AboutDetails/>
         <Contact/>
         <TableContactInfo/>
-        <Testimonials/>
-        <Appointment/>
+        <Suspense fallback={null}>
+          <Testimonials/>
+        </Suspense>
+        <Suspense fallback={null}>
+          <Appointment/>
+        </Suspense>
         <Footer/>
         
     </div>

@@ -11,7 +11,7 @@ Referencia: diagnóstico del sitio (CRA + CSS en `public/` + media pesada).
 | Fase | Nombre | Esfuerzo | Estado |
 |------|--------|----------|--------|
 | 0 | Quick wins (peso) | S | 🟡 En curso (0.1–0.3 hechos; falta 0.4) |
-| 1 | Consistencia (tokens / CSS) | M | 🟡 En curso (1.1 hecho; falta 1.2–1.4) |
+| 1 | Consistencia (tokens / CSS) | M | 🟡 En curso (1.1–1.3 esencial hecho; falta 1.4) |
 | 2 | Tailwind (opcional) | L | ⬜ No iniciar aún |
 
 **Regla:** no empezar Fase 2 hasta cerrar Fase 0 y lo esencial de Fase 1.
@@ -54,6 +54,7 @@ Referencia: diagnóstico del sitio (CRA + CSS en `public/` + media pesada).
 | 2026-08-12 | — | Hero MP4: 3523 KB → 379 KB; poster WebP 16 KB; un solo `<video>` |
 | 2026-08-12 | — | Assets: 3/6/doctora webp −1.45 MB; acordion1.png −334 KB; IMG_* → `assets-raw/` (fuera de build) |
 | 2026-08-12 | 4.25 | Prompt 3: FA −30 KB; OpenSans TTF→woff2 (−142 KB); deps muertas; build OK |
+| 2026-08-12 | 4.13 | Prompt 5: Bootstrap out (−153 KB CSS); lazy chunks; Facilities 2 slides; Contact→WA |
 
 ---
 
@@ -75,17 +76,17 @@ Referencia: diagnóstico del sitio (CRA + CSS en `public/` + media pesada).
 - [x] Revisar `.section-title { margin-top: 140px !important }` y `section { font-size: 3rem }` en `index.css`
 
 ### 1.2 Bootstrap → grid mínimo
-- [ ] Inventariar usos reales: `container`, `row`, `col-md-auto`, `table`, `justify-content-*`
-- [ ] Sustituir por CSS propio equivalente (mismo layout)
-- [ ] Quitar `bootstrap.min.css` de `index.html` cuando no queden clases Bootstrap
+- [x] Inventariar usos reales: `container`, `row`, `col-md-auto`, `table`, `justify-content-*`
+- [x] Sustituir por CSS propio equivalente (mismo layout) en `common.css`
+- [x] Quitar `bootstrap.min.css` de `index.html` (archivo eliminado, ~153 KB)
 - [x] Quitar resto púrpura / estilos huérfanos (p. ej. `#6a0dad` en `testimonials.css`)
 
 ### 1.3 Estructura de producto (opcional pero recomendado)
-- [ ] Facilities: quitar slides duplicados (solo 2 imágenes únicas)
-- [ ] AboutDetails: no repetir la misma foto 4× (o simplificar en mobile)
-- [ ] Valorar fusionar Contact + TableContactInfo (horarios/mapa) en una sección
-- [ ] `React.lazy` para Testimonials / Facilities / Appointment
-- [ ] Formulario Contact: definir comportamiento real (o CTA WhatsApp si no hay backend)
+- [x] Facilities: quitar slides duplicados (solo 2 imágenes únicas)
+- [x] AboutDetails: no repetir la misma foto 4× (CSS `background-image` una URL)
+- [ ] Valorar fusionar Contact + TableContactInfo (horarios/mapa) en una sección — **diferido** (riesgo layout; ver parking lot)
+- [x] `React.lazy` para Testimonials / Facilities / Appointment
+- [x] Formulario Contact: Enviar → WhatsApp prellenado (mismo número que CTAs)
 
 ### 1.4 Checklist de cierre Fase 1
 - [ ] Misma identidad visual en desktop y mobile
@@ -118,7 +119,7 @@ Usar como tickets concretos; marcar al completar. Prompts listos abajo (copiar/p
 2. [x] **Higiene assets** → [Prompt 2](#prompt-2--higiene-de-assets)
 3. [x] **Dead weight CSS/deps** → [Prompt 3](#prompt-3--dead-weight-css--deps)
 4. [x] **Design tokens** → [Prompt 4](#prompt-4--design-tokens)
-5. [ ] **Bootstrap out + lazy** → [Prompt 5](#prompt-5--bootstrap-out--lazy-secciones)
+5. [x] **Bootstrap out + lazy** → [Prompt 5](#prompt-5--bootstrap-out--lazy-secciones)
 
 ---
 
@@ -254,7 +255,7 @@ Al final: build OK, tamaño build, checklist visual breve, marcar issue 5 + 1.2/
 |------|----------|-------|
 | ¿Usar los `IMG_*.PNG` nuevos? | ⬜ Sí (comprimidos) / ⬜ No (fuera del repo/deploy) — hoy en `assets-raw/` (gitignore), no en `public/` ni build | 2026-08-12 |
 | ¿Migrar a Tailwind? | ⬜ Sí (Fase 2) / ⬜ No (quedarse en CSS + tokens) | |
-| ¿Fusionar Contact + horarios + mapa? | ⬜ Sí / ⬜ No | |
+| ¿Fusionar Contact + horarios + mapa? | ❌ No por ahora — layouts distintos (form+info vs tabla+iframe); fusionar rompería secciones; revisar solo si se rediseña Contact | 2026-08-12 |
 | Testimonials `.section-title` 30px | ✅ Intencional (título largo); token `--title-size-sm` | 2026-08-12 |
 | Breakpoints → 768/1024 | ⬜ Diferido: Header.js y CSS usan ~1000; unificar en prompt 5 o follow-up | 2026-08-12 |
 | `section { font-size: 3rem }` | ✅ Conservado (legacy; hijos override); no tocar sin QA visual | 2026-08-12 |
@@ -272,3 +273,4 @@ Al final: build OK, tamaño build, checklist visual breve, marcar issue 5 + 1.2/
 | 2026-08-12 | Prompt 2 Higiene assets: IMG_* → `assets-raw/` (~12.8 MB fuera de deploy); `acordion1.png` eliminado; 3/6/doctora reencode; lazy+dims en About/InnovationList/AboutDetails/Footer. Facilities usa `background-image` (lazy N/A). Pendiente opcional: 1/2/4.webp siguen ~4K. |
 | 2026-08-12 | Prompt 3 Dead weight: quitado Font Awesome + CSS; `react-scroll-parallax` + 7 workbox-* no usados; OpenSans Bold/Regular TTF→woff2 (130→58 KB c/u, TTF borrados); eliminados `App.css`, `navigations.js`; import Facilities en Innovation. `npm run build` OK — build/ **4.25 MB**. |
 | 2026-08-12 | Prompt 4 Design tokens: `:root` en `common.css`; hex de marca → `var(--…)`; `.section-title` unificado (48px; Testimonials 30px a propósito); variantes botón en `common.css`; `#6a0dad` → CTA; breakpoints 990/1000/1180/1200 dejados (Header.js = 1000); `section{font-size:3rem}` y margin 140px !important conservados con nota. |
+| 2026-08-12 | Prompt 5 Bootstrap out + lazy: grid mínimo en `common.css` (mismas clases); quitado `bootstrap.min.css`; `React.lazy` Facilities/Testimonials/Appointment; Facilities 2 slides; AboutDetails sin 4× `<img>`; Contact Enviar→WhatsApp; merge Contact+tabla diferido. `npm run build` OK — build/ **4.13 MB**. Checklist visual: home/servicios/innovación/contacto/footer sin cambio de marca; accordion AboutDetails con foto vía CSS. |

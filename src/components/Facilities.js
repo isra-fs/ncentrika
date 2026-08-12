@@ -10,14 +10,6 @@ const Facilities = () => {
 		  url: 'resources/images/facilities2.webp',
 		  id:2,
 		},
-		{
-		  url: 'resources/images/facilities1.webp',
-		  id:3,
-		},
-		{
-		  url: 'resources/images/facilities2.webp',
-		  id:4,
-		},
 	  ];
   return (
     <section className="section-facilities" >

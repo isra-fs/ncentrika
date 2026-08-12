@@ -6,9 +6,9 @@ export const AppoinmentButton = ({text,extraClass=''}) => {
          href="https://api.whatsapp.com/send?phone=6646706182" data-action="share/whatsapp/share" rel="noreferrer">{text}</a>
     )
 }
-export const GeneralButton = ({text,extraClass='',onclick}) => {
+export const GeneralButton = ({text,extraClass='',onclick, type='button'}) => {
     return (
-        <button className={`appoinment-general-button ${extraClass}`} onClick={onclick}>{text}</button>
+        <button type={type} className={`appoinment-general-button ${extraClass}`} onClick={onclick}>{text}</button>
     )
 }
 export const PhoneButton = ({number,href,extraClass}) => {
