@@ -94,6 +94,15 @@ Referencia: diagnóstico del sitio (CRA + CSS en `public/` + media pesada).
 - [x] Breakpoints coherentes (nav JS + CSS alineados a **1000px**; `NAV_BREAKPOINT` en Header.js)
 - [x] Menos CSS duplicado entre `public/css/*.css` (viñetas estrella + `.container` mobile en `common.css`; home usa `var(--font-*)`)
 
+### 1.5 Auditoría de anchos (post cierre Fase 1)
+Referencia: content ~1120–1280 · lectura ~600–720px · gutters ≥16 · sin overflow-x en 320–1920.
+
+- [x] Inventariar `width` fijos ≥1000 / `max-width` / contenedores de sección
+- [x] Conclusión: **no** está “demasiado ancho” vs estándar (`.container` 1140 = Bootstrap XL); sensación de tamaño = tipografía/márgenes de marca (conservar)
+- [x] **P0 overflow:** `.container-home` `width:1140px` → `max-width:1140px; width:100%` (`home.css`)
+- [x] **P2:** quitar regla huérfana `.services-list { width:1140px }` (`services.css`; clase no usada)
+- [ ] P2 opcional: gutters 15→16–20px; revisar `min-width:100%` en `.container` ≤1000
+
 ---
 
 ## Fase 2 — Tailwind (opcional, solo si hace falta)
@@ -261,6 +270,7 @@ Al final: build OK, tamaño build, checklist visual breve, marcar issue 5 + 1.2/
 | Breakpoints → 768/1024 | ✅ Estándar de sitio = **1000px** (nav + secciones). 768/1024 solo grid. Secundarios: 1180 header, 1200 contact/innovation | 2026-08-12 |
 | `section { font-size: 3rem }` | ✅ Conservado (legacy; hijos override); no tocar sin QA visual | 2026-08-12 |
 | `.section-title` margin 140px !important | ✅ Conservado vía `--space-section-title` (Bootstrap/heading resets) | 2026-08-12 |
+| Content max-width / “¿muy ancha?” | ✅ 1140 OK (Bootstrap XL). Overflow era `.container-home` fijo, no el grid. Conservar hero 80px / títulos 48px / margin 140px | 2026-08-12 |
 
 ---
 
@@ -276,3 +286,4 @@ Al final: build OK, tamaño build, checklist visual breve, marcar issue 5 + 1.2/
 | 2026-08-12 | Prompt 4 Design tokens: `:root` en `common.css`; hex de marca → `var(--…)`; `.section-title` unificado (48px; Testimonials 30px a propósito); variantes botón en `common.css`; `#6a0dad` → CTA; breakpoints 990/1000/1180/1200 dejados (Header.js = 1000); `section{font-size:3rem}` y margin 140px !important conservados con nota. |
 | 2026-08-12 | Prompt 5 Bootstrap out + lazy: grid mínimo en `common.css` (mismas clases); quitado `bootstrap.min.css`; `React.lazy` Facilities/Testimonials/Appointment; Facilities 2 slides; AboutDetails sin 4× `<img>`; Contact Enviar→WhatsApp; merge Contact+tabla diferido. `npm run build` OK — build/ **4.13 MB**. Checklist visual: home/servicios/innovación/contacto/footer sin cambio de marca; accordion AboutDetails con foto vía CSS. |
 | 2026-08-12 | Cierre Fase 0.4 + 1.4 (sin prompt nuevo): build **4.13 MB**; preview local OK; 990/900/1120 → **1000** (alineado Header); duplicados innovation/appointment (stars + container) y media testimonials 1120 consolidados en `common.css` / un solo `@media 1000`. |
+| 2026-08-12 | Auditoría anchos (§1.5): `.container-home` → `max-width:1140px; width:100%` (evita overflow-x &lt;1140); eliminada regla muerta `.services-list`. Sin rediseño de marca. |

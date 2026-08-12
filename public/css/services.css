@@ -25,9 +25,6 @@
     margin-bottom: 40px;
     color: var(--color-text);
 }
-.conteiner-services .services-list{
-    width: 1140px;
-}
 .row.justify-content-md-center .col-md-auto > p {
     font-size: 16px;
     max-width: 700px;
