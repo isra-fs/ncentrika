@@ -10,11 +10,19 @@
     width: 1140px;
     margin: 0 auto;
     padding: 100px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 .home-slogan, .home-video{
     width: 50%;
-    float: left;
+}
+.home-slogan{
+    order: 1;
+}
+.home-video{
+    order: 2;
 }
 .home-slogan  h1{
     margin-top: 20px;
@@ -62,9 +70,6 @@
     object-fit: cover;
     z-index: -100;
 }
-.responsive{
-    display: none;
-}
 @media (max-width: 1000px){
     .section-home{
         height: auto;
@@ -79,13 +84,15 @@
         font-size: 40px;
         margin-top: 5px;
     }
-    .home-video.responsive{
-        display: block;
+    /* Mobile: video above slogan (same as former .responsive / .destock split) */
+    .home-video{
+        order: 1;
         margin-top: 100px;
         border-radius: 0px;
         height: auto;
+        aspect-ratio: 1 / 1;
     }
-    .home-video.destock{
-        display: none;
+    .home-slogan{
+        order: 2;
     }
 }
