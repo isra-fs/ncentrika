@@ -10,7 +10,7 @@ Referencia: diagnóstico del sitio (CRA + CSS en `public/` + media pesada).
 
 | Fase | Nombre | Esfuerzo | Estado |
 |------|--------|----------|--------|
-| 0 | Quick wins (peso) | S | 🟡 En curso (0.1–0.2 hechos) |
+| 0 | Quick wins (peso) | S | 🟡 En curso (0.1–0.3 hechos; falta 0.4) |
 | 1 | Consistencia (tokens / CSS) | M | ⬜ Pendiente |
 | 2 | Tailwind (opcional) | L | ⬜ No iniciar aún |
 
@@ -35,12 +35,12 @@ Referencia: diagnóstico del sitio (CRA + CSS en `public/` + media pesada).
 - [x] Añadir `loading="lazy"` + `width`/`height` (o aspect-ratio) en imágenes below-the-fold
 
 ### 0.3 CSS / deps muertos (P0–P1)
-- [ ] Quitar Font Awesome de `public/index.html` (`font-awesome.min.css`)
-- [ ] Eliminar `react-scroll-parallax` de `package.json` (no se usa)
-- [ ] Limpiar paquetes `workbox-*` no importados en `src/service-worker.js`
-- [ ] Convertir OpenSans TTF → **woff2** y actualizar `@font-face` en `public/css/common.css`
-- [ ] Borrar / no linkear dead code: `src/App.css` (boilerplate), revisar `src/components/navigations.js`
-- [ ] Quitar import unused de `Facilities` en `src/components/Innovation.js`
+- [x] Quitar Font Awesome de `public/index.html` (`font-awesome.min.css`)
+- [x] Eliminar `react-scroll-parallax` de `package.json` (no se usa)
+- [x] Limpiar paquetes `workbox-*` no importados en `src/service-worker.js`
+- [x] Convertir OpenSans TTF → **woff2** y actualizar `@font-face` en `public/css/common.css`
+- [x] Borrar / no linkear dead code: `src/App.css` (boilerplate), revisar `src/components/navigations.js`
+- [x] Quitar import unused de `Facilities` en `src/components/Innovation.js`
 
 ### 0.4 Checklist de cierre Fase 0
 - [ ] `npm run build` y anotar tamaño total de `build/` (antes ~21.7 MB)
@@ -53,6 +53,7 @@ Referencia: diagnóstico del sitio (CRA + CSS en `public/` + media pesada).
 |-------|-----------|-------|
 | 2026-08-12 | — | Hero MP4: 3523 KB → 379 KB; poster WebP 16 KB; un solo `<video>` |
 | 2026-08-12 | — | Assets: 3/6/doctora webp −1.45 MB; acordion1.png −334 KB; IMG_* → `assets-raw/` (fuera de build) |
+| 2026-08-12 | 4.25 | Prompt 3: FA −30 KB; OpenSans TTF→woff2 (−142 KB); deps muertas; build OK |
 
 ---
 
@@ -115,7 +116,7 @@ Usar como tickets concretos; marcar al completar. Prompts listos abajo (copiar/p
 
 1. [x] **Hero video** → [Prompt 1](#prompt-1--hero-video)
 2. [x] **Higiene assets** → [Prompt 2](#prompt-2--higiene-de-assets)
-3. [ ] **Dead weight CSS/deps** → [Prompt 3](#prompt-3--dead-weight-css--deps)
+3. [x] **Dead weight CSS/deps** → [Prompt 3](#prompt-3--dead-weight-css--deps)
 4. [ ] **Design tokens** → [Prompt 4](#prompt-4--design-tokens)
 5. [ ] **Bootstrap out + lazy** → [Prompt 5](#prompt-5--bootstrap-out--lazy-secciones)
 
@@ -265,3 +266,4 @@ Al final: build OK, tamaño build, checklist visual breve, marcar issue 5 + 1.2/
 | | Añadidos 5 prompts ejecutables (issues 1–5). |
 | 2026-08-12 | Prompt 1 Hero video: 1× `<video>`, poster WebP 13 KB, MP4 3.5 MB → 379 KB (1080 CRF26), IO + preload=none. |
 | 2026-08-12 | Prompt 2 Higiene assets: IMG_* → `assets-raw/` (~12.8 MB fuera de deploy); `acordion1.png` eliminado; 3/6/doctora reencode; lazy+dims en About/InnovationList/AboutDetails/Footer. Facilities usa `background-image` (lazy N/A). Pendiente opcional: 1/2/4.webp siguen ~4K. |
+| 2026-08-12 | Prompt 3 Dead weight: quitado Font Awesome + CSS; `react-scroll-parallax` + 7 workbox-* no usados; OpenSans Bold/Regular TTF→woff2 (130→58 KB c/u, TTF borrados); eliminados `App.css`, `navigations.js`; import Facilities en Innovation. `npm run build` OK — build/ **4.25 MB**. |

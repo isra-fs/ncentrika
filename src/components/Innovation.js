@@ -1,7 +1,7 @@
 import React from 'react';
 import { GeneralButton } from './Button';
 import InnovationList from './InnovationList';
-import Facilities from './Facilities';
+
 const Innovation = () => {
 
     const handleClick = (e) => {

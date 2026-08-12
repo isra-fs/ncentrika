@@ -65,14 +65,16 @@
 @font-face {
     font-family: "OpenSans-Bold";
     src: local("OpenSans-Bold"),
-     url("../resources/fonts/OpenSans-Bold.ttf") format("truetype");
-        font-weight: bold;
+     url("../resources/fonts/OpenSans-Bold.woff2") format("woff2");
+    font-weight: bold;
+    font-display: swap;
 }
 @font-face {
     font-family: "OpenSans-Regular";
     src: local("OpenSans-Regular"),
-     url("../resources/fonts/OpenSans-Regular.ttf") format("truetype");
-        font-weight: bold;
+     url("../resources/fonts/OpenSans-Regular.woff2") format("woff2");
+    font-weight: bold;
+    font-display: swap;
 }
 section, header{
     font-family:'OpenSans-Regular';
