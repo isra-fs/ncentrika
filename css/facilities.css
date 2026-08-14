@@ -1,61 +1,93 @@
 .section-facilities{
     display: block;
-    background-color: #FFFFFF;
+    background-color: var(--color-white);
 }
 .section-facilities > h1{
-    font-family: 'OpenSans-Bold';
-    font-size: 48px;
+    font-family: var(--font-bold);
+    font-size: var(--title-size);
     text-transform: none;
     margin-bottom: 40px;
-    color: #3B3937;
-    margin-top: 30px;
+    color: var(--color-text);
+    margin-top: 20px;
     text-align: center;
 }
-.section-facilities > div> .react-slideshow-container{
-    width: 100%;
-    background-color: #FFFFFF;
+.facilities-slider {
+    position: relative;
+    padding: 8px 0 28px;
 }
-.section-facilities .react-slideshow-container >button{
-    display: none;
+.section-facilities .container {
+    position: relative;
+    z-index: 1;
 }
 .section-facilities .react-slideshow-container{
-    border-radius: 0px;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    background-color: transparent;
+    border-radius: 0;
+    position: relative;
 }
 .section-facilities .slide-botton-background{
-    background-color: #FABE15;
+    background-color: var(--color-menta);
     width: 100%;
-    height: 300px;
+    height: 42%;
+    min-height: 180px;
     position: absolute;
-    bottom: 0px;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+    pointer-events: none;
 }
-.section-facilities .slide-facilities-img  {
+.section-facilities .react-slideshow-container .nav {
+    margin-top: 0;
+    top: 42%;
+    transform: translateY(-50%);
+    width: 46px !important;
+    height: 46px;
+    background: var(--color-cta) !important;
+    z-index: 5;
+    cursor: pointer;
+}
+.section-facilities .react-slideshow-container .nav:hover,
+.section-facilities .react-slideshow-container .nav:focus {
+    background: var(--color-mint) !important;
+}
+.section-facilities .react-slideshow-container .nav svg {
+    fill: var(--color-text);
+}
+.facilities-slide {
+    padding: 0 12px 56px;
+    box-sizing: border-box;
+}
+.facilities-card {
+    margin: 0;
+    background-color: var(--color-cream);
+    border-radius: 28px;
+    aspect-ratio: 3 / 4;
     display: flex;
-    align-items: end;
+    align-items: center;
     justify-content: center;
-    position:relative;
-    z-index:999;
+    overflow: hidden;
 }
-.section-facilities .slide-facilities-img  > div {
-    padding: 20px;
-    margin:0px 0px 80px 0px;
-    height:500px;
-    width:500px;
-    background-size: cover;
-    border-radius: 40px;
+.facilities-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
-
-
 @media (max-width: 1000px){
-    .section-facilities .slide-facilities-img  > div {
-        margin:0px 0px 40px 0px;
-        height:300px;
-        width:300px;
-    }
     .section-facilities .slide-botton-background{
-        height: 200px;
+        height: 38%;
     }
     .section-facilities > h1{
-        font-size: 30px;
+        font-size: var(--title-size-sm);
     }
-    
+    .facilities-slide {
+        padding: 0 8px 40px;
+    }
+    .section-facilities .react-slideshow-container .nav {
+        width: 40px !important;
+        height: 40px;
+        top: 40%;
+    }
 }

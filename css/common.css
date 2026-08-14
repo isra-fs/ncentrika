@@ -1,3 +1,103 @@
+/* Design tokens — mismos valores de marca; no rediseñar */
+:root {
+    /* Brand colors */
+    --color-mint: #92D2C7;
+    --color-cta: #FABE15;
+    --color-pink: #EAA9CB;
+    --color-blue: #99BFE5;
+    --color-coral: #F98F8A;
+    --color-cream: #FFF8F0;
+    --color-text: #3B3937;
+
+    /* Paleta nueva (Karen, 2026-08-14) — tokens listos; aún no aplicados a secciones */
+    --color-aqua: #85CAC3;
+    --color-yellow: #FFF0C3;
+    --color-coral-new: #EE9585;
+    --color-menta: #CAE1DA;
+    --color-orange: #FAAB73;
+
+    /* Neutrals used with buttons / surfaces */
+    --color-white: #ffffff;
+    --color-black: #000000;
+
+    /* Typography */
+    --font-bold: 'OpenSans-Bold';
+    --font-regular: 'OpenSans-Regular';
+    --title-size: 48px;
+    --title-size-sm: 30px; /* Testimonials: título largo a propósito */
+
+    /* Spacing */
+    --space-section-title: 20px;
+
+    /*
+      Breakpoints (nav JS + CSS alineados):
+      --bp-md: 768px   (grid Bootstrap-compat)
+      --bp-nav: 1000px (Header.js + layouts mobile de sección)
+      --bp-lg: 1024px
+      Secundarios intencionales (densidad, no switch nav):
+      1180 header, 1200 contact/innovation imágenes.
+    */
+}
+
+/*
+  Grid mínimo (reemplazo de Bootstrap usado en el sitio).
+  Mismas clases: container / row / col-md-auto / justify-content-md-center / table
+*/
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+@media (min-width: 576px) {
+    .container { max-width: 540px; }
+}
+@media (min-width: 768px) {
+    .container { max-width: 720px; }
+}
+@media (min-width: 992px) {
+    .container { max-width: 960px; }
+}
+@media (min-width: 1200px) {
+    .container { max-width: 1140px; }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-md-auto {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+@media (min-width: 768px) {
+    .col-md-auto {
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%;
+    }
+    .justify-content-md-center {
+        justify-content: center;
+    }
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: inherit;
+    border-collapse: collapse;
+}
+.table th,
+.table td {
+    padding: 0.75rem;
+    vertical-align: top;
+}
 
 .appoinment-general-button{
     display: inline-block;
@@ -12,35 +112,63 @@
     -ms-flex-align: center;
     align-items: center;
     border-radius: 30px;
-    background-color: #FABE15;
+    background-color: var(--color-cta);
     -webkit-transition: all 400ms ease;
     transition: all 400ms ease;
-    color: #000000;
+    color: var(--color-text);
     font-size: 14px;
     line-height: 26px;
     font-weight: 600;
     text-align: center;
     letter-spacing: 0px;
     text-decoration: none !important;
-    font-family: 'OpenSans-Bold';
+    font-family: var(--font-bold);
 }
+
+/* Títulos de sección unificados (48px). Testimonials override → 30px. */
 .section-title{
-    margin-top: 140px !important;
+    font-family: var(--font-bold);
+    font-size: var(--title-size);
+    color: var(--color-text);
+    text-transform: none;
+    margin-top: var(--space-section-title) !important;
+    /* !important: evita que resets de heading pisen el margen de marca */
 }
+
+.section-testimonials .section-title{
+    font-size: var(--title-size-sm);
+}
+
+/* Variantes de botón (mismas clases usadas desde Button.js) */
 .header-button{
-    background-color: #FFF8F0;
-    color: #3B3937;
+    background-color: var(--color-yellow);
+    color: var(--color-text);
 }
 .home-appoinment{
-    color: #3B3937;
+    background-color: var(--color-coral-new);
+    color: var(--color-text);
 }
-.contact-appoinment{
-    color: #3B3937;
-    padding: 10px 40px;
-
+.home-pdf {
+    background-color: var(--color-mint);
+    padding: 15px 45px;
+    color: var(--color-text);
 }
+.contact-appoinment,
 .contact-appoinment-two{
-    color: #000000;
+    background-color: var(--color-coral-new);
+    color: var(--color-white);
+    padding: 10px 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.contact-appoinment .contact-whatsapp-icon,
+.contact-appoinment-two .contact-whatsapp-icon {
+    width: 18px;
+    height: 18px;
+    fill: var(--color-white);
+    flex-shrink: 0;
 }
 .phone-general-button{
     font-weight: bold;
@@ -49,8 +177,23 @@
     margin-right: 20px;
 }
 .form-generalButton{
-    background-color:#FFF;
+    background-color: var(--color-coral-new);
     width: 150px;
+}
+.footer-appoinment-button {
+    background-color: var(--color-yellow);
+    color: var(--color-text);
+    padding: 10px 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.footer-appoinment-button .contact-whatsapp-icon {
+    width: 18px;
+    height: 18px;
+    fill: var(--color-text);
+    flex-shrink: 0;
 }
 .fixed-mobile{
     position: absolute;
@@ -60,16 +203,40 @@
 @font-face {
     font-family: "OpenSans-Bold";
     src: local("OpenSans-Bold"),
-     url("../resources/fonts/OpenSans-Bold.ttf") format("truetype");
-        font-weight: bold;
+     url("../resources/fonts/OpenSans-Bold.woff2") format("woff2");
+    font-weight: bold;
+    font-display: swap;
 }
 @font-face {
     font-family: "OpenSans-Regular";
     src: local("OpenSans-Regular"),
-     url("../resources/fonts/OpenSans-Regular.ttf") format("truetype");
-        font-weight: bold;
+     url("../resources/fonts/OpenSans-Regular.woff2") format("woff2");
+    font-weight: bold;
+    font-display: swap;
 }
 section, header{
-    font-family:'OpenSans-Regular';
+    font-family: var(--font-regular);
 }
 
+/* Listas con viñeta estrella (Innovation + Appointment) */
+.section-innovation ul li::before,
+.section-appointment ul li::before {
+    color: transparent;
+    font-size: 0;
+    content: "";
+    margin-right: 10px;
+    padding: 10px;
+    background-color: orange;
+    mask-image: url("../resources/images/star-icon.svg");
+    -webkit-mask-image: url("../resources/images/star-icon.svg");
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    vertical-align: top;
+}
+
+/* Mobile de sección: mismo corte que Header (1000px) */
+@media (max-width: 1000px) {
+    .container {
+        min-width: 100% !important;
+    }
+}

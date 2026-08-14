@@ -1,16 +1,17 @@
 .section-testimonials {
   display: block;
-  padding-top: 40px;
+  padding-top: 0;
   padding-bottom: 40px;
 }
 
 .section-testimonials>h1 {
-  font-family: 'OpenSans-Bold';
-  font-size: 30px;
+  font-family: var(--font-bold);
+  /* 30px a propósito: título largo; ver --title-size-sm */
+  font-size: var(--title-size-sm);
   text-transform: none;
   margin-bottom: 40px;
-  color: #3B3937;
-  margin-top: 30px;
+  color: var(--color-text);
+  margin-top: 20px;
   text-align: center;
 }
 
@@ -37,7 +38,7 @@
   text-align: center;
   margin: 0 auto;
   width: 80%;
-  background: #FFF8F0;
+  background: var(--color-cream);
   height: 60%;
   display: flex;
   justify-content: center;
@@ -66,17 +67,18 @@
   overflow-wrap: break-word;
   text-align: center;
   margin-top: 25px;
+  color: var(--color-text);
 }
 .each-slide-effect a>div>p  >strong{
-  font-family: 'OpenSans-Bold';
+  font-family: var(--font-bold);
   font-size: 20px;
-  color: #3B3937;
+  color: var(--color-text);
 }
 
 .react-slideshow-container {
   width: 50%;
   margin: 0 auto;
-  background: #FFF8F0;
+  background: var(--color-cream);
   border-radius: 50px;
 
 }
@@ -161,7 +163,7 @@ button:focus {
 }
 
 .slideshowDot.active {
-  background-color: #6a0dad;
+  background-color: var(--color-cta);
 }
 
 @keyframes fade {
@@ -201,8 +203,8 @@ button:focus {
 }
 
 .section-testimonials .testimonal-user div>h6 {
-  font-family: 'OpenSans-Bold';
-  color: #3B3937;
+  font-family: var(--font-bold);
+  color: var(--color-text);
   font-size: 18px;
   margin: 0px 15px;
   letter-spacing: 0px;
@@ -211,8 +213,8 @@ button:focus {
 
 .section-testimonials .testimonal-user div>h2 {
   text-transform: capitalize;
-  font-family: 'OpenSans-Bold';
-  color: #3B3937;
+  font-family: var(--font-bold);
+  color: var(--color-text);
   font-size: 18px;
   line-height: 30px;
 }
@@ -244,7 +246,7 @@ button:focus {
   margin-right: 0.9em;
   margin-bottom: 1.2em;
   border-right: 0.3em solid transparent;
-  border-bottom: 0.7em solid #fc0;
+  border-bottom: 0.7em solid var(--color-cta);
   border-left: 0.3em solid transparent;
   font-size: 10px;
   align-self: center;
@@ -260,7 +262,7 @@ button:focus {
   top: 0.6em;
   left: -1em;
   border-right: 1em solid transparent;
-  border-bottom: 0.7em solid #fc0;
+  border-bottom: 0.7em solid var(--color-cta);
   border-left: 1em solid transparent;
   transform: rotate(-35deg);
 }
@@ -270,6 +272,10 @@ button:focus {
 }
 
 @media (max-width: 1000px) {
+  .react-slideshow-container {
+    width: 90%;
+  }
+
   .testimonials-opinions>div {
     width: 98%;
     height: 90%;
@@ -283,7 +289,7 @@ button:focus {
   }
 
   .section-testimonials {
-    padding: 40px 0px;
+    padding: 0 0 40px;
   }
 
   .each-slide-effect a>div {
@@ -295,13 +301,6 @@ button:focus {
 
   }
 
-}
-
-
-@media (max-width: 1120px) {
-  .react-slideshow-container {
-    width: 90%;
-  }
 }
 
 @media (max-width: 720px) {

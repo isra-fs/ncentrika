@@ -1,14 +1,26 @@
 {
   "files": {
-    "main.css": "https://isra-fs.github.io/ncentrika/static/css/main.5737dc12.css",
-    "main.js": "https://isra-fs.github.io/ncentrika/static/js/main.e2369326.js",
+    "main.css": "https://isra-fs.github.io/ncentrika/static/css/main.02179c5e.css",
+    "main.js": "https://isra-fs.github.io/ncentrika/static/js/main.5a09be44.js",
+    "static/css/863.95ed933b.chunk.css": "https://isra-fs.github.io/ncentrika/static/css/863.95ed933b.chunk.css",
+    "static/js/863.3c6a4c84.chunk.js": "https://isra-fs.github.io/ncentrika/static/js/863.3c6a4c84.chunk.js",
+    "static/css/411.95ed933b.chunk.css": "https://isra-fs.github.io/ncentrika/static/css/411.95ed933b.chunk.css",
+    "static/js/411.e499459b.chunk.js": "https://isra-fs.github.io/ncentrika/static/js/411.e499459b.chunk.js",
+    "static/js/306.544ab252.chunk.js": "https://isra-fs.github.io/ncentrika/static/js/306.544ab252.chunk.js",
+    "static/js/442.7201234d.chunk.js": "https://isra-fs.github.io/ncentrika/static/js/442.7201234d.chunk.js",
     "service-worker.js": "https://isra-fs.github.io/ncentrika/service-worker.js",
     "index.html": "https://isra-fs.github.io/ncentrika/index.html",
-    "main.5737dc12.css.map": "https://isra-fs.github.io/ncentrika/static/css/main.5737dc12.css.map",
-    "main.e2369326.js.map": "https://isra-fs.github.io/ncentrika/static/js/main.e2369326.js.map"
+    "main.02179c5e.css.map": "https://isra-fs.github.io/ncentrika/static/css/main.02179c5e.css.map",
+    "main.5a09be44.js.map": "https://isra-fs.github.io/ncentrika/static/js/main.5a09be44.js.map",
+    "863.95ed933b.chunk.css.map": "https://isra-fs.github.io/ncentrika/static/css/863.95ed933b.chunk.css.map",
+    "863.3c6a4c84.chunk.js.map": "https://isra-fs.github.io/ncentrika/static/js/863.3c6a4c84.chunk.js.map",
+    "411.95ed933b.chunk.css.map": "https://isra-fs.github.io/ncentrika/static/css/411.95ed933b.chunk.css.map",
+    "411.e499459b.chunk.js.map": "https://isra-fs.github.io/ncentrika/static/js/411.e499459b.chunk.js.map",
+    "306.544ab252.chunk.js.map": "https://isra-fs.github.io/ncentrika/static/js/306.544ab252.chunk.js.map",
+    "442.7201234d.chunk.js.map": "https://isra-fs.github.io/ncentrika/static/js/442.7201234d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5737dc12.css",
-    "static/js/main.e2369326.js"
+    "static/css/main.02179c5e.css",
+    "static/js/main.5a09be44.js"
   ]
 }

@@ -1,21 +1,21 @@
 .section-appointment{
-    padding-top: 70px;
+    padding-top: 0;
     padding-bottom: 70px;
-    background-color: #FFF8F0;
+    background-color: var(--color-yellow);
     text-align: center;
 }
 
 .section-appointment h1 {
-    font-family: 'OpenSans-Bold';
-    font-size: 48px;
+    font-family: var(--font-bold);
+    font-size: var(--title-size);
     text-transform: none;
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 40px;
 }
 
 .section-appointment ul {
     font-size: 18px;
-    color: #000000;
+    color: var(--color-text);
     line-height: 34px;
     text-align: left;
     width: 50%;
@@ -26,50 +26,34 @@
 .section-appointment  ul li {
     max-width: 700px;
 }
-.section-appointment ul li::before {
-    color: transparent;
-    font-size: 0px;
-    content: "";
-    margin-right: 10px;
-    padding: 10px;
-    background-color: orange;
-    mask-image: url("../resources/images/star-icon.svg");
-    -webkit-mask-image: url("../resources/images/star-icon.svg");
-    -webkit-mask-size: cover;
-    mask-size: cover;
-    vertical-align: top;
-}
 .section-appointment .appointment-description{
     padding: 40px;
 }
 .section-appointment h2{
-    color: #3B3937;
+    color: var(--color-text);
     text-transform: capitalize;
-    font-size: 30px;
-    font-family: 'OpenSans-Bold';
+    font-size: var(--title-size-sm);
+    font-family: var(--font-bold);
     text-align: center;
     margin-bottom: 40px;
 }
 .section-appointment p{
-    color: #3B3937;
+    color: var(--color-text);
     font-size: 18px;
     text-align: center;
-    font-family: 'OpenSans-Regular';
+    font-family: var(--font-regular);
     line-height: 40px;
 }
 
-@media (max-width: 990px){
+@media (max-width: 1000px){
     .section-appointment .appointment-description{
         padding: 0px;
     }
-    .container{
-        min-width: 100% !important;
-    }
     .section-appointment{
-        padding-top: 50px;
+        padding-top: 0;
     }
     .section-appointment h1 {
-        font-size: 30px;
+        font-size: var(--title-size-sm);
     }
     .section-appointment ul
      {
