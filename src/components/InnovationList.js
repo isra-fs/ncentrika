@@ -11,7 +11,7 @@ const InnovationList = () => {
                     src='resources/images/1.webp'
                     alt='Laser diodo en odontología pediátrica'
                     width={300}
-                    height={225}
+                    height={250}
                     loading='lazy'
                     decoding='async'
                 />
@@ -33,7 +33,7 @@ const InnovationList = () => {
                     src='resources/images/2.webp'
                     alt='Itero (Scanner dental)'
                     width={300}
-                    height={400}
+                    height={603}
                     loading='lazy'
                     decoding='async'
                 />
