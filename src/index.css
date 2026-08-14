@@ -8,7 +8,8 @@
           box-sizing: border-box;}
 html, body {
   width: 100%;
-  min-height: 100%; 
+  min-height: 100%;
+  color: var(--color-text);
 }
 h1,h2,h3,h4,h5,p{
   letter-spacing:0px;
@@ -40,7 +41,7 @@ nav{
   right: 15px;
   outline: none;
   background-color: white;
-  color: #000;
+  color: var(--color-text);
   border-radius: 100%;
 }
 .addTransiton{
@@ -53,7 +54,7 @@ nav{
 }
 
 #sidebar-list{
-  background-color: var(--color-blue);
+  background-color: var(--color-aqua);
   height: 90vh;
   width: 250px;
   position: absolute;

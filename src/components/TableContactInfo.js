@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppoinmentButton } from './Button'
+import { AppoinmentButton, WhatsappIcon } from './Button'
 const TableContactInfo = () => {
     return (
         <section className='section-table-info'>
@@ -23,16 +23,22 @@ const TableContactInfo = () => {
                         </tr>
                         <tr>
                             <th></th>
-                            <th> <AppoinmentButton text={'Quiero agendar una cita'} extraClass="contact-appoinment-two desk" /></th>
+                            <th>
+                                <AppoinmentButton text={'Quiero agendar una cita'} extraClass="contact-appoinment-two desk">
+                                    <WhatsappIcon />
+                                </AppoinmentButton>
+                            </th>
                         </tr>
                         </tbody>
                     </table>
-                    <AppoinmentButton text={'Quiero agendar una cita'} extraClass="contact-appoinment-two mobile" />
+                    <AppoinmentButton text={'Quiero agendar una cita'} extraClass="contact-appoinment-two mobile">
+                        <WhatsappIcon />
+                    </AppoinmentButton>
                 </div>
 
             </div>
             <div className='contact-map-information'>
-                <iframe width="100%" height="700" title="clubMap"
+                <iframe width="100%" height="520" title="clubMap"
                     id="gmap_canvas" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3364.2551038810616!2d-117.0123902!3d32.519332999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d9499106d91f1b%3A0xa6552d2c22c977ed!2sNc%C3%A9ntrika%20%2F%20Dra.%20Karla%20Bonilla!5e0!3m2!1ses!2smx!4v1678932221229!5m2!1ses!2smx"
                 >
                 </iframe>

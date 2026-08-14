@@ -9,6 +9,13 @@
     --color-cream: #FFF8F0;
     --color-text: #3B3937;
 
+    /* Paleta nueva (Karen, 2026-08-14) — tokens listos; aún no aplicados a secciones */
+    --color-aqua: #85CAC3;
+    --color-yellow: #FFF0C3;
+    --color-coral-new: #EE9585;
+    --color-menta: #CAE1DA;
+    --color-orange: #FAAB73;
+
     /* Neutrals used with buttons / surfaces */
     --color-white: #ffffff;
     --color-black: #000000;
@@ -20,7 +27,7 @@
     --title-size-sm: 30px; /* Testimonials: título largo a propósito */
 
     /* Spacing */
-    --space-section-title: 140px;
+    --space-section-title: 70px;
 
     /*
       Breakpoints (nav JS + CSS alineados):
@@ -108,7 +115,7 @@
     background-color: var(--color-cta);
     -webkit-transition: all 400ms ease;
     transition: all 400ms ease;
-    color: var(--color-black);
+    color: var(--color-text);
     font-size: 14px;
     line-height: 26px;
     font-weight: 600;
@@ -134,10 +141,11 @@
 
 /* Variantes de botón (mismas clases usadas desde Button.js) */
 .header-button{
-    background-color: var(--color-cream);
+    background-color: var(--color-yellow);
     color: var(--color-text);
 }
 .home-appoinment{
+    background-color: var(--color-coral-new);
     color: var(--color-text);
 }
 .home-pdf {
@@ -145,12 +153,22 @@
     padding: 15px 45px;
     color: var(--color-text);
 }
-.contact-appoinment{
-    color: var(--color-text);
-    padding: 10px 40px;
-}
+.contact-appoinment,
 .contact-appoinment-two{
-    color: var(--color-black);
+    background-color: var(--color-coral-new);
+    color: var(--color-white);
+    padding: 10px 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.contact-appoinment .contact-whatsapp-icon,
+.contact-appoinment-two .contact-whatsapp-icon {
+    width: 18px;
+    height: 18px;
+    fill: var(--color-white);
+    flex-shrink: 0;
 }
 .phone-general-button{
     font-weight: bold;
@@ -159,11 +177,23 @@
     margin-right: 20px;
 }
 .form-generalButton{
-    background-color: var(--color-white);
+    background-color: var(--color-coral-new);
     width: 150px;
 }
 .footer-appoinment-button {
-    background-color: var(--color-white);
+    background-color: var(--color-yellow);
+    color: var(--color-text);
+    padding: 10px 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.footer-appoinment-button .contact-whatsapp-icon {
+    width: 18px;
+    height: 18px;
+    fill: var(--color-text);
+    flex-shrink: 0;
 }
 .fixed-mobile{
     position: absolute;

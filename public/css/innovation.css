@@ -1,7 +1,7 @@
 .section-innovation{
     padding-top: 70px;
     padding-bottom: 70px;
-    background-color: var(--color-cream);
+    background-color: var(--color-yellow);
     text-align: center;
 }
 
@@ -16,7 +16,7 @@
     margin: 0px;
     width: 100%;
     font-size: 16px;
-    color: var(--color-black);
+    color: var(--color-text);
     line-height: 34px;
     text-align: left;
     list-style-type: none;
@@ -31,7 +31,7 @@
 }
 .section-innovation #innovationPreview {
     font-size: 18px;
-    color: var(--color-black);
+    color: var(--color-text);
     line-height: 34px;
     text-align: left;
     width: 50%;
@@ -41,8 +41,8 @@
 }
 
 .section-innovation .show-more-elements{
-    background-color: var(--color-cta);
-    color: var(--color-black);
+    background-color: var(--color-coral-new);
+    color: var(--color-text);
     min-width: 150px;
 }
 .section-innovation  ul li {

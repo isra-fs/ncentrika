@@ -67,7 +67,7 @@
   overflow-wrap: break-word;
   text-align: center;
   margin-top: 25px;
-  color: #55595c;
+  color: var(--color-text);
 }
 .each-slide-effect a>div>p  >strong{
   font-family: var(--font-bold);

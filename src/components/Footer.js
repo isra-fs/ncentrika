@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppoinmentButton } from './Button';
+import { AppoinmentButton, WhatsappIcon } from './Button';
 import Navbar from './Navbar';
 const Footer = () => {
     return (
@@ -20,7 +20,11 @@ const Footer = () => {
                     <img src='resources/images/logo.svg' alt='Ncentrika' className='ncentrika-logo' loading='lazy' decoding='async' />
                     <ul>
                         <li>664 6706182 | 664 6858610</li>
-                        <li> <AppoinmentButton text={'Quiero agendar una cita'} extraClass="footer-appoinment-button" /></li>
+                        <li>
+                            <AppoinmentButton text={'Quiero agendar una cita'} extraClass="footer-appoinment-button">
+                                <WhatsappIcon />
+                            </AppoinmentButton>
+                        </li>
                     </ul>
                     <ul><Navbar navClass="nav-big" linkClassName="nav-big-link"/>
                     </ul>
@@ -43,7 +47,6 @@ const Footer = () => {
                     </ul>
                 </div>
             </div>
-            <img src='resources/images/Fondo-Footer.svg' alt='Fondo-Footer' className='background-footer-destock' loading='lazy' decoding='async' />
             <img src='resources/images/fondo-footer-phone.svg' alt='Fondo-Footer' className='background-footer-phone' loading='lazy' decoding='async' />
         </footer>
     )

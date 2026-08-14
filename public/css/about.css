@@ -1,10 +1,7 @@
 .section-about{
     width: 100%;
-    background-color: var(--color-pink);
+    background-color: var(--color-aqua);
     color: var(--color-text);
-    background-image: url(../resources/images/backgroundAbout.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
     text-align: center;
     padding-bottom: 30px;
 }

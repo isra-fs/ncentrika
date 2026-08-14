@@ -1,5 +1,5 @@
 import React from 'react';
-import { GeneralButton, AppoinmentButton } from './Button'
+import { GeneralButton, AppoinmentButton, WhatsappIcon } from './Button'
 const WHATSAPP_CONTACT = 'https://api.whatsapp.com/send?phone=6646706182';
 
 const Contact = () => {
@@ -49,7 +49,9 @@ const Contact = () => {
                                 <p>Teléfono: 664 6858610 <br />
                                     <strong>Whatsapp:</strong><br />
                                     664 6706182</p>
-                                <AppoinmentButton text={'Llamar'} extraClass="contact-appoinment" />
+                                <AppoinmentButton text={'Llamar'} extraClass="contact-appoinment">
+                                    <WhatsappIcon />
+                                </AppoinmentButton>
                                 <div className='contact-social-network'>
 
                                     <a href='https://www.facebook.com/DraKarlaBonilla' target={'_blank'} rel="noreferrer">

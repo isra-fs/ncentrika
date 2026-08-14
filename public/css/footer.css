@@ -60,7 +60,7 @@
 }
 
 .footer-footer .footer-information {
-    background-color: var(--color-blue);
+    background-color: var(--color-aqua);
     width: 100%;
     height: 250px;
     display: flex;
@@ -107,9 +107,6 @@
     .background-footer-phone{
         display: block; 
      }
-     .background-footer-destock{
-        display: none;
-     }
 }
 @media (max-width: 820px){
     .footer-information .container > img{
@@ -117,8 +114,9 @@
     }
 
     .contact-appoinment-two.mobile{
-        display: block;
-        width: 70%;
+        display: inline-flex;
+        width: auto;
+        max-width: 100%;
         margin: 0 auto;
     }
     .footer-footer .footer-information{

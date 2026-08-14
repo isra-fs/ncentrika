@@ -6,7 +6,6 @@ import Services from './components/Services';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Innovation from './components/Innovation';
-import TopHeader from './components/TopHeader';
 import TableContactInfo from './components/TableContactInfo';
 import AboutDetails from './components/AboutDetails';
 
@@ -17,7 +16,6 @@ const Appointment = lazy(() => import('./components/Appointment'));
 const App = ()=>{
   return(
     <div>
-        <TopHeader/>
         <Header/>
         <Home/>
         <Services/>

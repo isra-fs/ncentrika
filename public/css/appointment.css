@@ -1,7 +1,7 @@
 .section-appointment{
     padding-top: 70px;
     padding-bottom: 70px;
-    background-color: var(--color-cream);
+    background-color: var(--color-yellow);
     text-align: center;
 }
 
@@ -15,7 +15,7 @@
 
 .section-appointment ul {
     font-size: 18px;
-    color: var(--color-black);
+    color: var(--color-text);
     line-height: 34px;
     text-align: left;
     width: 50%;

@@ -19,7 +19,7 @@
     width: 40%;
     margin-top: 100px;
     display: none;
-    color: #55595c;
+    color: var(--color-text);
   }
 
   /* Una sola URL de foto (caché del navegador); sin 4× <img> */
@@ -36,7 +36,7 @@
     transform: rotate(90deg);
     margin-top: 150px;
     font-family: var(--font-bold);
-    color: white;
+    color: var(--color-text);
     display: block;
     -webkit-animation-name: fadeIn;
     -webkit-animation-duration: 1s;
@@ -86,15 +86,24 @@
   }
 
   .item-1 { 
-    background-color: var(--color-blue);
+    background-color: var(--color-aqua);
+  }
+  .item-1 > h1 {
+    color: var(--color-white);
   }
   
   .item-2 { 
-    background-color: var(--color-mint);
+    background-color: var(--color-orange);
+  }
+  .item-2 > h1 {
+    color: var(--color-white);
   }
   
   .item-3 { 
-    background-color: var(--color-pink);
+    background-color: var(--color-coral-new);
+  }
+  .item-3 > h1 {
+    color: var(--color-white);
   }
   
   .item-4 { 
