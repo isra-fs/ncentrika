@@ -2,6 +2,9 @@
 import React from 'react';
 import { Link } from 'react-scroll';
 
+/** Header 70px + un poco de aire para que el título no quede debajo */
+export const HEADER_SCROLL_OFFSET = -90;
+
 const Navbar = ({navClass, linkClassName}) =>(
     <NavComponent navClass={navClass}
                   linkClassName = {linkClassName}
@@ -34,6 +37,7 @@ export const NavComponent = ({onClick, navClass, linkClassName})=>(
       {navigationInfo.map(navigation=>
         <Link to={navigation.route}
               smooth={true}
+              offset={HEADER_SCROLL_OFFSET}
               className={linkClassName}
               onClick={onClick}
               key={navigation.route}>

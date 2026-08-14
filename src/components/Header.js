@@ -1,6 +1,6 @@
 // Header.js
 import React from 'react';
-import Navbar from './Navbar';
+import Navbar, { HEADER_SCROLL_OFFSET } from './Navbar';
 import { Link } from 'react-scroll'; // react-scroll is a library for scrolling in React
 import SmallScreensNavbar from './SmallScreensNavbar';
 import { useWindowWidthAndHeight } from './CustomHooks';
@@ -14,7 +14,8 @@ const Header = () =>{
         <header>
             <div className="header-inner">
                 <Link to="Home" 
-                      smooth={true} 
+                      smooth={true}
+                      offset={HEADER_SCROLL_OFFSET}
                       className="logo nav-link">
                       <img src='resources/images/logo.svg' alt='Ncentrika' className='ncentrika-logo'/>
                 </Link>
