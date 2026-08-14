@@ -2,7 +2,7 @@ import React from 'react';
 import { AppoinmentButton, GeneralButton } from './Button';
 
 const RAINBOW_BANDS = ['b1', 'b2', 'b3', 'b4', 'b5', 'b6'];
-const SUN_RAYS = [0, 45, 90, 135, 180, 225, 270, 315];
+const SUN_RAYS = [0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330];
 
 const Home = () => {
     const openDentalInsurance = () => {
