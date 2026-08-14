@@ -1,54 +1,13 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { AppoinmentButton, GeneralButton } from './Button';
 
-const VIDEO_SRC = 'resources/videos/homeVideo.mp4';
+const RAINBOW_BANDS = ['b1', 'b2', 'b3', 'b4', 'b5', 'b6'];
+const SUN_RAYS = [0, 45, 90, 135, 180, 225, 270, 315];
 
 const Home = () => {
-    const videoRef = useRef(null);
-
     const openDentalInsurance = () => {
         window.open('resources/Seguro-Dental-Americano.pdf', '_blank', 'noopener,noreferrer');
     };
-
-    useEffect(() => {
-        const video = videoRef.current;
-        if (!video) return;
-
-        const playWhenReady = () => {
-            video.play().catch(() => {});
-        };
-
-        const loadAndPlay = () => {
-            if (!video.getAttribute('src')) {
-                video.setAttribute('src', VIDEO_SRC);
-                video.load();
-            }
-            if (video.readyState >= 2) {
-                playWhenReady();
-            } else {
-                video.addEventListener('loadeddata', playWhenReady, { once: true });
-            }
-        };
-
-        // Hero is above the fold; IO still avoids starting the download until painted,
-        // and keeps a single autoplay path for muted + playsInline.
-        if (typeof IntersectionObserver === 'undefined') {
-            loadAndPlay();
-            return undefined;
-        }
-
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    loadAndPlay();
-                    observer.disconnect();
-                }
-            },
-            { rootMargin: '80px' }
-        );
-        observer.observe(video);
-        return () => observer.disconnect();
-    }, []);
 
     return (
         <section id="Home" className='section-home' >
@@ -61,16 +20,26 @@ const Home = () => {
                         <GeneralButton text={'Seguro dental'} extraClass="home-pdf" onclick={openDentalInsurance} />
                     </div>
                 </div>
-                <div className="home-video">
-                    <video
-                        ref={videoRef}
-                        poster="resources/images/homeVideo-poster.webp"
-                        muted
-                        autoPlay
-                        loop
-                        playsInline
-                        preload="none"
-                    />
+                <div className="home-visual" aria-hidden="true">
+                    <div className="home-rainbow">
+                        <div className="rainbow-sun">
+                            <div className="sun-rays">
+                                {SUN_RAYS.map((angle) => (
+                                    <span
+                                        key={angle}
+                                        className="sun-ray"
+                                        style={{ '--ray': `${angle}deg` }}
+                                    />
+                                ))}
+                            </div>
+                            <div className="sun-disc" />
+                        </div>
+                        <div className="rainbow-stack">
+                            {RAINBOW_BANDS.map((band) => (
+                                <div key={band} className={`rainbow-band ${band}`} />
+                            ))}
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
