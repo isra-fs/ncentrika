@@ -19,7 +19,7 @@ const Footer = () => {
                 <div className="container">
                     <img src='resources/images/logo.svg' alt='Ncentrika' className='ncentrika-logo' loading='lazy' decoding='async' />
                     <ul>
-                        <li>664 6706182 | 664 7656045</li>
+                        <li>664 6706182 | 664 6858610</li>
                         <li> <AppoinmentButton text={'Quiero agendar una cita'} extraClass="footer-appoinment-button" /></li>
                     </ul>
                     <ul><Navbar navClass="nav-big" linkClassName="nav-big-link"/>

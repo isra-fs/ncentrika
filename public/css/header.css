@@ -71,6 +71,9 @@ header{
     display: flex;
     justify-content: flex-end;
 }
+.header-inner .phone-general-button {
+    color: #1a1a1a;
+}
 
 
 @media (max-width: 1180px){

@@ -24,7 +24,6 @@ const Innovation = () => {
                 <ul id="innovationPreview">
                     <li>Laser diodo en odontología pediátrica</li>
                     <li>Itero (Scanner dental)</li>
-                    <li>Radiografía digital</li>
                     <li>Software de lectura de tomografía</li>
                     <li>Software Nemoceph</li>
                     <li>Articulador AD2</li>

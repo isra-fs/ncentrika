@@ -47,30 +47,6 @@ const InnovationList = () => {
                     <li>Podemos ver transformada tu sonrisa en minutos</li>
                 </ul>
             </div>
-            <div className="col-md-auto">
-                <img
-                    src='resources/images/3.webp'
-                    alt='Radiografía digital'
-                    width={300}
-                    height={213}
-                    loading='lazy'
-                    decoding='async'
-                />
-            </div>
-            <div className="col-md-auto">
-                <h1>Radiografía digital</h1>
-                <p>
-                Herramienta de diagnóstico que nos permite observar estructuras internas 
-                de los dientes; en la odontopediatría se utiliza para la valoración de los
-                 tratamientos pre y post operatorios. La digitalización de estos procesos
-                  favorece a una menor radiación para el paciente, una definición mas alta de 
-                  imagen y nos brinda la oportunidad de observar estructuras 
-                anatómicas que en una radiografía convencional no se distinguen adecuadamente.
-                </p>
-            </div>
-
-
-
             <div className="col-md-auto ">
                 <img
                     src='resources/images/4.webp'

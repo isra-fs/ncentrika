@@ -106,6 +106,9 @@
     
     
 }
+.table tbody th{
+    color: #55595c;
+}
 .table td strong, .table th strong{
     font-family: var(--font-bold);
 }

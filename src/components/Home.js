@@ -54,7 +54,7 @@ const Home = () => {
         <section id="Home" className='section-home' >
             <div className="container-home">
                 <div className="home-slogan">
-                    <h1>Un futuro para sonreir</h1>
+                    <h1>UN FUTURO PARA SONREIR</h1>
                     <p>La mejor experiencia en atención dental para bebés, niños, adolescentes y sus familias.</p>
                     <div className="home-cta">
                         <AppoinmentButton text={'Agenda hoy'} extraClass="home-appoinment"/>

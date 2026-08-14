@@ -19,6 +19,7 @@
     width: 40%;
     margin-top: 100px;
     display: none;
+    color: #55595c;
   }
 
   /* Una sola URL de foto (caché del navegador); sin 4× <img> */

@@ -18,7 +18,7 @@ const About = () =>{
                 <div className='about-description'>
                     <h2>Dra. Karla Bonilla</h2>
                     <p>Somos un grupo de especialistas en Odontología
-                        Pediátrica con más de 15 años de experiencia en
+                        Pediátrica con más de 20 años de experiencia en
                         la atención de los más pequeños.<br/><br/>
                         En constante actualización, buscando la mejor
                         tecnología y todas las alternativas de atención
