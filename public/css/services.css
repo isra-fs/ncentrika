@@ -3,11 +3,8 @@
     width: 100%;
 }
 .section-services .container{
-    background-color: var(--color-coral-new);
     padding-top: 0;
     padding-bottom: 40px;
-    max-width: none;
-    width: 100%;
 }
 .conteiner-services{
    width: 100%;
