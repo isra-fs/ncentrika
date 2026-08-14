@@ -48,10 +48,16 @@
 .section-innovation  ul li {
     max-width: 700px;
 }
-.section-innovation .col-md-auto{
-    margin-bottom: 40px;
+.section-innovation .innovation-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    width: 100%;
+    margin: 0 0 40px;
+    text-align: left;
 }
-.section-innovation .col-md-auto img {
+.section-innovation .innovation-item img {
+    flex: 0 0 300px;
     width: 300px;
     max-width: 100%;
     height: auto;
@@ -59,19 +65,32 @@
     border-radius: 30px;
     display: block;
 }
+.section-innovation .innovation-copy {
+    flex: 1;
+    min-width: 0;
+}
+.section-innovation .innovation-copy h1 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+.section-innovation .innovation-copy p {
+    font-size: 16px;
+    color: var(--color-text);
+    line-height: 34px;
+    text-align: left;
+    margin: 0;
+}
 
 .hide-innovation-list {
     display: none;
 }
 
 @media (max-width: 1200px){
-    .section-innovation .col-md-auto img {
+    .section-innovation .innovation-item img {
+        flex-basis: 200px;
         width: 200px;
     }
-    .section-innovation .col-md-auto h1 {
-        margin-top: 0px;
-    }
-    
 }
 @media (max-width: 1000px){
     .section-innovation{
@@ -79,6 +98,10 @@
     }
     .section-innovation h1 {
         font-size: var(--title-size-sm);
+    }
+    .section-innovation .innovation-copy h1 {
+        font-size: 18px;
+        margin-top: 0;
     }
     .section-innovation ul.laser-list,
     .section-innovation ul#innovationPreview
@@ -89,13 +112,12 @@
         text-align: left;
         margin-left: 10px;
     }
-    .section-innovation .col-md-auto img {
-        width: 100%;
+    .section-innovation .innovation-item {
+        gap: 16px;
+        margin-bottom: 28px;
     }
-    .section-innovation .col-md-auto{
-        margin-bottom: 0px;
-    }
-    .section-innovation .col-md-auto h1 {
-        margin-top: 20px;
+    .section-innovation .innovation-item img {
+        flex-basis: 120px;
+        width: 120px;
     }
 }

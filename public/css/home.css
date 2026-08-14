@@ -56,8 +56,8 @@
 
 .home-rainbow{
     position: absolute;
-    left: 0;
-    right: 4%;
+    left: -2%;
+    right: -2%;
     bottom: 0;
     height: 80%;
 }
@@ -111,8 +111,8 @@
     position: absolute;
     inset: 0;
     z-index: 1;
-    transform-origin: bottom center;
-    animation: rainbow-grow 1.15s cubic-bezier(0.22, 1, 0.36, 1) both;
+    transform-origin: 50% 38%;
+    animation: rainbow-appear 1.7s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .rainbow-band{
@@ -126,16 +126,18 @@
     border-radius: 50% 50% 0 0;
     box-sizing: border-box;
     pointer-events: none;
+    animation: rainbow-band-in 1.05s ease-out both;
 }
 
 .rainbow-band.b1{
     --off: 0;
     --c: var(--color-aqua);
     background: var(--color-white);
+    animation-delay: 0.58s;
 }
-.rainbow-band.b2{ --off: calc(var(--band) + var(--g1)); --c: var(--color-menta); }
-.rainbow-band.b3{ --off: calc(2 * var(--band) + var(--g1) + var(--g2)); --c: var(--color-coral-new); }
-.rainbow-band.b4{ --off: calc(3 * var(--band) + var(--g1) + var(--g2) + var(--g3)); --c: var(--color-orange); }
+.rainbow-band.b2{ --off: calc(var(--band) + var(--g1)); --c: var(--color-menta); animation-delay: 0.48s; }
+.rainbow-band.b3{ --off: calc(2 * var(--band) + var(--g1) + var(--g2)); --c: var(--color-coral-new); animation-delay: 0.38s; }
+.rainbow-band.b4{ --off: calc(3 * var(--band) + var(--g1) + var(--g2) + var(--g3)); --c: var(--color-orange); animation-delay: 0.28s; }
 .rainbow-band.b5{
     --off: calc(4 * var(--band) + var(--g1) + var(--g2) + var(--g3) + var(--g4));
     --c: var(--color-yellow);
@@ -143,6 +145,7 @@
     border-width: 34px;
     transform: scaleY(0.92);
     transform-origin: bottom center;
+    animation-delay: 0.18s;
 }
 .rainbow-band.b6{
     --off: calc(5 * var(--band) + var(--g1) + var(--g2) + var(--g3) + var(--g4) + var(--g5));
@@ -151,17 +154,25 @@
     top: calc(var(--off) + 11%);
     transform: scaleY(0.92);
     transform-origin: bottom center;
+    animation-delay: 0.08s;
 }
 
-@keyframes rainbow-grow{
+@keyframes rainbow-appear{
     from{
-        transform: scaleY(0.12);
-        opacity: 0.35;
+        opacity: 0;
+        filter: blur(10px);
+        clip-path: inset(0 12% 62% 12%);
     }
     to{
-        transform: scaleY(1);
         opacity: 1;
+        filter: blur(0);
+        clip-path: inset(0);
     }
+}
+
+@keyframes rainbow-band-in{
+    from{ opacity: 0; }
+    to{ opacity: 1; }
 }
 
 @keyframes sun-fade{
@@ -182,9 +193,12 @@
 
 @media (prefers-reduced-motion: reduce){
     .rainbow-stack,
+    .rainbow-band,
     .rainbow-sun,
     .sun-rays{
         animation: none;
+        filter: none;
+        clip-path: none;
     }
 }
 
@@ -196,41 +210,58 @@
         width: 100%;
     }
     .container-home{
-        padding: 90px 15px 20px;
+        padding: 82px 16px 0;
     }
     .home-slogan{
-        order: 2;
-    }
-    .home-slogan  h1{
-        font-size: 36px;
+        order: 1;
         margin-top: 8px;
     }
+    .home-slogan  h1{
+        font-size: 32px;
+        margin-top: 0;
+        margin-bottom: 12px;
+    }
+    .home-slogan p{
+        font-size: 15px;
+        margin-bottom: 16px;
+    }
+    .home-slogan  button,
+    .home-slogan  .appoinment-general-button{
+        font-size: 15px;
+        padding: 12px 28px;
+    }
     .home-visual{
-        order: 1;
-        margin-top: 20px;
+        order: 2;
+        width: 92%;
+        max-width: none;
+        margin: 56px auto 0;
         height: auto;
-        aspect-ratio: 1.55 / 1;
-        overflow: hidden;
+        aspect-ratio: 1.2 / 1;
+        overflow: visible;
     }
     .home-rainbow{
         left: 0;
         right: 0;
         height: 100%;
+        --s: 0.62;
     }
     .rainbow-sun{
-        top: -2%;
-        right: 8%;
-        width: 32%;
+        top: -10%;
+        right: 4%;
+        width: 38%;
     }
     .rainbow-stack{
-        --band: 14px;
-        --g1: 11px;
-        --g2: 7px;
-        --g3: 10px;
-        --g4: 6px;
-        --g5: 13px;
+        --band: calc(27px * var(--s));
+        --g1: calc(22px * var(--s));
+        --g2: calc(14px * var(--s));
+        --g3: calc(20px * var(--s));
+        --g4: calc(13px * var(--s));
+        --g5: calc(26px * var(--s));
     }
     .rainbow-band.b5{
-        border-width: 18px;
+        border-width: calc(34px * var(--s));
+    }
+    .rainbow-band.b6{
+        top: calc(var(--off) + 11%);
     }
 }

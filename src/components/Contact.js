@@ -41,10 +41,9 @@ const Contact = () => {
                     </div>
                     <div className="col-md-auto">
                         <div className='information-contact'>
-                            <p >Torre Platino Piso 4 Interior 402
-                                Blvd. Rodolfo Sanchez Taboada
-                                #10488 Zona Urbana Rio
-                                C.P. 23010 Tijuana B.C. México</p>
+                            <p >Edificio REC 9460 Interior 302
+                                Calle Guadalupe Victoria Zona Río
+                                C.P. 22010 Tijuana B.C. México</p>
                             <div>
                                 <p>Teléfono: 664 6858610 <br />
                                     <strong>Whatsapp:</strong><br />
