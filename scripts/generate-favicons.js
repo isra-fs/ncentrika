@@ -28,7 +28,6 @@ function ffmpegScale(outName, size) {
 }
 
 const derived = [
-  [16, 'favicon-16.png'],
   [32, 'favicon-32.png'],
   [48, 'favicon-48.png'],
   [180, 'apple-touch-icon.png'],
