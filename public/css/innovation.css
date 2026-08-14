@@ -1,5 +1,5 @@
 .section-innovation{
-    padding-top: 70px;
+    padding-top: 0;
     padding-bottom: 70px;
     background-color: var(--color-yellow);
     text-align: center;
@@ -9,7 +9,7 @@
     font-family: var(--font-bold);
     font-size: var(--title-size);
     text-transform: none;
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 40px;
 }
 .laser-list{
@@ -75,7 +75,7 @@
 }
 @media (max-width: 1000px){
     .section-innovation{
-        padding-top: 50px;
+        padding-top: 0;
     }
     .section-innovation h1 {
         font-size: var(--title-size-sm);

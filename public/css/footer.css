@@ -99,15 +99,6 @@
     margin-right: 10px;
 }
 
-.background-footer-phone{
-   display: none; 
-}
-
-@media (max-width: 1000px){
-    .background-footer-phone{
-        display: block; 
-     }
-}
 @media (max-width: 820px){
     .footer-information .container > img{
         display: none;

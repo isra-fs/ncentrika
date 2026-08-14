@@ -1,6 +1,6 @@
 .section-testimonials {
   display: block;
-  padding-top: 40px;
+  padding-top: 0;
   padding-bottom: 40px;
 }
 
@@ -11,7 +11,7 @@
   text-transform: none;
   margin-bottom: 40px;
   color: var(--color-text);
-  margin-top: 30px;
+  margin-top: 20px;
   text-align: center;
 }
 
@@ -289,7 +289,7 @@ button:focus {
   }
 
   .section-testimonials {
-    padding: 40px 0px;
+    padding: 0 0 40px;
   }
 
   .each-slide-effect a>div {

@@ -3,7 +3,7 @@
 }
 .section-services .container{
     background-color: var(--color-coral-new);
-    padding-top: 20px;
+    padding-top: 0;
     padding-bottom: 40px;
 
 }

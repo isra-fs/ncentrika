@@ -47,7 +47,6 @@ const Footer = () => {
                     </ul>
                 </div>
             </div>
-            <img src='resources/images/fondo-footer-phone.svg' alt='Fondo-Footer' className='background-footer-phone' loading='lazy' decoding='async' />
         </footer>
     )
 }
